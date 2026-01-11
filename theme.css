@@ -1,0 +1,1264 @@
+:root {
+    /* ORIGINAL COLORS - commented out for easy revert */
+    /* Dark theme colors */
+    /*--bg-primary: #0a1628;
+    --bg-secondary: #1a2332;
+    --bg-card: #1e293b;
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-primary: #00d4aa;
+    --accent-secondary: #00b89f;
+    --border-color: #334155;
+    --shadow-color: rgba(0, 0, 0, 0.3);*/
+    
+    /* Light theme colors */
+    /*--bg-primary-light: #ffffff;
+    --bg-secondary-light: #f8fafc;
+    --bg-card-light: #ffffff;
+    --text-primary-light: #1e293b;
+    --text-secondary-light: #475569;
+    --text-muted-light: #64748b;
+    --accent-primary-light: #00d4aa;
+    --accent-secondary-light: #00b89f;
+    --border-color-light: #e2e8f0;
+    --shadow-color-light: rgba(0, 0, 0, 0.1);*/
+
+    /* NEW SIMPLIFIED COLORS - White, Black, and Subdued Gold */
+    /* Dark theme colors */
+    --bg-primary: #000000;
+    --bg-secondary: #1a1a1a;
+    --bg-card: #2a2a2a;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #999999;
+    --accent-primary: #9D8255;
+    --accent-secondary: #B8976B;
+    --border-color: #444444;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    
+    /* Light theme colors */
+    --bg-primary-light: #ffffff;
+    --bg-secondary-light: #f9f9f9;
+    --bg-card-light: #ffffff;
+    --text-primary-light: #000000;
+    --text-secondary-light: #333333;
+    --text-muted-light: #666666;
+    --accent-primary-light: #9D8255;
+    --accent-secondary-light: #B8976B;
+    --border-color-light: #dddddd;
+    --shadow-color-light: rgba(0, 0, 0, 0.1);
+}
+
+/* Global styling */
+* {
+    transition: all 0.3s ease;
+}
+
+body {
+    background: var(--bg-primary);
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+/* Light mode */
+body.light-mode {
+    background: var(--bg-primary-light);
+    color: var(--text-primary-light);
+    --bg-primary: var(--bg-primary-light);
+    --bg-secondary: var(--bg-secondary-light);
+    --bg-card: var(--bg-card-light);
+    --text-primary: var(--text-primary-light);
+    --text-secondary: var(--text-secondary-light);
+    --text-muted: var(--text-muted-light);
+    --border-color: var(--border-color-light);
+    --shadow-color: var(--shadow-color-light);
+}
+
+/* Theme toggle */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--accent-primary);
+    border: none;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(157, 130, 85, 0.3);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(157, 130, 85, 0.4);
+}
+
+/* Typography */
+h1 {
+    color: var(--text-primary);
+    font-weight: 700;
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    color: var(--text-secondary);
+    font-weight: 400;
+    text-align: left;
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+/* Cards */
+.card {
+    background: var(--bg-card);
+    position: relative;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 0 8px 32px var(--shadow-color);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Simplified card overlay */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(157, 130, 85, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(157, 130, 85, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+    border-radius: 16px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+/* Light mode card overlay */
+body.light-mode .card::before {
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(157, 130, 85, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(157, 130, 85, 0.03) 0%, transparent 50%);
+}
+
+/* Simplified border effect */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px var(--shadow-color);
+}
+
+.card:hover::before {
+    opacity: 1;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(157, 130, 85, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(157, 130, 85, 0.08) 0%, transparent 50%);
+}
+
+/* Light mode hover */
+body.light-mode .card:hover::before {
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(157, 130, 85, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(157, 130, 85, 0.08) 0%, transparent 50%);
+}
+
+.card:hover {
+    border-color: var(--accent-primary);
+}
+
+.card-body {
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.card-title {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--accent-primary);
+}
+
+.card-header {
+    background: rgba(157, 130, 85, 0.05);
+    border-bottom: 2px solid var(--accent-primary);
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Feature list styling */
+.feature-list {
+    background: var(--bg-card);
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    border-left: 4px solid var(--accent-primary);
+}
+
+.feature-list::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 15% 15%, rgba(157, 130, 85, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 85% 85%, rgba(157, 130, 85, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    border-radius: 16px;
+    opacity: 0.7;
+}
+
+.feature-list li {
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-list li:hover {
+    transform: translateX(8px);
+    color: var(--text-primary);
+}
+
+.feature-list strong {
+    color: var(--text-primary);
+}
+
+/* Form styling */
+.form-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.form-control, .form-select {
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-primary);
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    background: var(--bg-card);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(157, 130, 85, 0.1);
+    color: var(--text-primary);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+/* Special styling for disabled/readonly progress fields */
+.form-control:disabled,
+.form-control[readonly] {
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    border: 2px solid var(--accent-primary) !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+}
+
+body.light-mode .form-control:disabled,
+body.light-mode .form-control[readonly] {
+    background: #f8f9fa !important;
+    color: #212529 !important;
+    border: 2px solid var(--accent-primary) !important;
+}
+
+/* Form check styling */
+.form-check-input {
+    background-color: var(--bg-card);
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.form-check-input:checked {
+    background-color: var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 3px rgba(157, 130, 85, 0.1);
+}
+
+.form-check-label {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--accent-primary);
+    border: none;
+    border-radius: 12px;
+    padding: 0.875rem 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(157, 130, 85, 0.3);
+    color: black;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(157, 130, 85, 0.4);
+    background: var(--accent-secondary);
+}
+
+
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-outline-primary {
+    background: transparent;
+    border: 2px solid var(--accent-primary);
+    color: var(--text-primary);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background: var(--accent-primary) !important;
+    border-color: var(--accent-primary) !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(157, 130, 85, 0.3);
+}
+
+
+
+.btn-outline-secondary {
+    background: transparent;
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background: var(--accent-primary) !important;
+    border-color: var(--accent-primary) !important;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(157, 130, 85, 0.3);
+}
+
+
+
+.btn-success {
+    background: var(--accent-primary);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+}
+
+/* Tabs */
+.nav-tabs {
+    border: none;
+    margin-bottom: 1.5rem;
+    gap: 0.5rem;
+}
+
+.nav-tabs .nav-link {
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-secondary);
+    padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+}
+
+.nav-tabs .nav-link.active {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: black !important;
+    box-shadow: 0 4px 20px rgba(157, 130, 85, 0.3);
+}
+
+.nav-tabs .nav-link.active * {
+    color: black !important;
+}
+
+/* Alerts */
+.alert-info {
+    background: rgba(157, 130, 85, 0.1);
+    border: 1px solid rgba(157, 130, 85, 0.3);
+    border-radius: 12px;
+    color: var(--text-primary);
+}
+
+.alert-warning {
+    background: rgba(157, 130, 85, 0.1);
+    border: 1px solid rgba(157, 130, 85, 0.3);
+    border-radius: 12px;
+    color: var(--text-primary);
+}
+
+.alert-success {
+    background: rgba(157, 130, 85, 0.1);
+    border: 1px solid rgba(157, 130, 85, 0.3);
+    border-radius: 12px;
+    color: var(--text-primary);
+}
+
+/* Badges */
+.badge {
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 0.4rem 0.8rem;
+}
+
+.badge.bg-primary {
+    background: var(--accent-primary) !important;
+    color: white;
+}
+
+.badge.bg-warning {
+    background: linear-gradient(135deg, #ffc107 0%, #ffab00 100%) !important;
+    color: #212529;
+}
+
+.badge.bg-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%) !important;
+    color: white;
+}
+
+.badge.bg-info {
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%) !important;
+    color: white;
+}
+
+/* Text colors */
+.text-primary {
+    color: var(--accent-primary) !important;
+}
+
+.header-container .text-accent {
+    color: var(--accent-primary) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+/* Fix general text color issues */
+.card .text-muted,
+.card small.text-muted,
+.text-muted small {
+    color: var(--text-muted) !important;
+}
+
+.card-body small,
+.card small,
+small {
+    color: var(--text-secondary) !important;
+}
+
+/* Ensure all card text is properly colored */
+.card-body,
+.card-header,
+.card {
+    color: var(--text-primary);
+}
+
+.card-body p,
+.card-body div,
+.card-body span,
+.card-header p,
+.card-header div,
+.card-header span {
+    color: inherit;
+}
+
+/* Fix Bootstrap overrides */
+.text-dark {
+    color: var(--text-primary) !important;
+}
+
+/* Ensure input placeholders are visible */
+.form-control::placeholder,
+.form-select option {
+    color: var(--text-muted) !important;
+}
+
+/* Fix any remaining dark text issues */
+body.light-mode .text-muted {
+    color: var(--text-muted-light) !important;
+}
+
+body.light-mode .text-secondary {
+    color: var(--text-secondary-light) !important;
+}
+
+/* Make sure all text in cards inherits proper colors */
+.card * {
+    color: inherit;
+}
+
+.card .text-success {
+    color: var(--accent-primary) !important;
+}
+
+/* Fix progress summary text */
+.alert {
+    color: var(--text-primary) !important;
+}
+
+.alert small {
+    color: var(--text-primary) !important;
+}
+
+/* Autocomplete styling */
+.autocomplete-container {
+    position: relative;
+    width: 100%;
+}
+
+.autocomplete-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1050;
+    display: none;
+    box-shadow: 0 8px 32px var(--shadow-color);
+}
+
+.autocomplete-suggestion {
+    padding: 0.875rem 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+    color: var(--text-secondary);
+}
+
+.autocomplete-suggestion:hover,
+.autocomplete-suggestion.selected {
+    background: rgba(0, 212, 170, 0.1);
+    color: var(--text-primary);
+}
+
+.autocomplete-suggestion:last-child {
+    border-bottom: none;
+}
+
+.validation-message {
+    margin-top: 0.5rem;
+    display: block;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.validation-message.valid {
+    color: var(--accent-primary);
+}
+
+.validation-message.invalid {
+    color: #ef4444;
+}
+
+.submit-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+/* Containers */
+.container {
+    max-width: 1200px;
+}
+
+/* Header container - no card styling */
+.header-container {
+    background: none !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* Strong tag styling in intro paragraph */
+.header-container strong {
+    color: var(--accent-primary) !important;
+    font-weight: 700 !important;
+}
+
+/* Plan page specific styles */
+.plan-header {
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(157, 130, 85, 0.05) 100%);
+    color: var(--text-primary);
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(10px);
+}
+
+.plan-header h1 {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: -0.02em;
+}
+
+.plan-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.progress-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: relative;
+    box-shadow: 0 8px 32px var(--shadow-color);
+}
+
+.progress-circle::before {
+    content: '';
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    position: absolute;
+}
+
+.progress-text {
+    position: relative;
+    z-index: 1;
+    color: var(--text-primary);
+}
+
+.reading-card {
+    transition: all 0.3s ease;
+    background: var(--bg-card);
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.reading-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 15% 15%, rgba(157, 130, 85, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(157, 130, 85, 0.03) 0%, transparent 40%);
+    pointer-events: none;
+    border-radius: 12px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.reading-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px var(--shadow-color);
+    border-color: var(--accent-primary);
+}
+
+.reading-card:hover::before {
+    opacity: 0.9;
+    background: 
+        radial-gradient(circle at 15% 15%, rgba(157, 130, 85, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(157, 130, 85, 0.08) 0%, transparent 40%);
+}
+
+/* Light mode reading cards */
+body.light-mode .reading-card::before {
+    background: 
+        radial-gradient(circle at 15% 15%, rgba(157, 130, 85, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(157, 130, 85, 0.03) 0%, transparent 40%);
+}
+
+body.light-mode .reading-card:hover::before {
+    background: 
+        radial-gradient(circle at 15% 15%, rgba(157, 130, 85, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(157, 130, 85, 0.08) 0%, transparent 40%);
+}
+
+.completed {
+    background: rgba(157, 130, 85, 0.1);
+    border-left: 4px solid var(--accent-primary);
+}
+
+.today {
+    background: rgba(157, 130, 85, 0.15);
+    border-left: 4px solid var(--accent-primary);
+}
+
+.future {
+    background: var(--bg-card);
+    border-left: 4px solid var(--border-color);
+}
+
+.status-badge {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.7rem;
+}
+
+.bookmark-box {
+    background: var(--bg-card);
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent-primary);
+}
+
+.bookmark-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 10% 10%, rgba(157, 130, 85, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 90% 90%, rgba(157, 130, 85, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    border-radius: 12px;
+    opacity: 0.8;
+}
+
+.bookmark-box * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Index page specific styles */
+body.light-mode .container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px var(--shadow-color);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 3rem 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .theme-toggle {
+        top: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .plan-header {
+        padding: 2rem 0;
+    }
+    
+    .plan-header h1 {
+        font-size: 2rem;
+    }
+    
+    .progress-circle {
+        width: 70px;
+        height: 70px;
+        font-size: 1rem;
+    }
+    
+    .progress-circle::before {
+        width: 55px;
+        height: 55px;
+    }
+    
+    /* Hide plan header card styling on mobile */
+    .plan-header {
+        background: transparent !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        padding: 2rem 0 !important;
+    }
+    
+    .plan-header::before {
+        display: none !important;
+    }
+    
+    .plan-header .container {
+        background: transparent !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+    }
+}
+
+/* More aggressive text color fixes - override Bootstrap completely */
+body,
+body *,
+.container,
+.container *,
+.card,
+.card *,
+.card-body,
+.card-body *,
+.card-header,
+.card-header * {
+    color: var(--text-primary) !important;
+}
+
+/* Specific overrides for muted and secondary text */
+.text-muted,
+.text-muted *,
+small,
+small *,
+.small,
+.small * {
+    color: var(--text-secondary) !important;
+}
+
+/* Ensure proper contrast for all text elements */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: var(--text-primary) !important;
+}
+
+p, div, span, li, td, th, label {
+    color: var(--text-primary) !important;
+}
+
+/* Override Bootstrap's text utilities completely */
+.text-dark,
+.text-body,
+.text-black {
+    color: var(--text-primary) !important;
+}
+
+.text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Form elements */
+.form-control,
+.form-select,
+.form-check-label {
+    color: var(--text-primary) !important;
+}
+
+/* Buttons should keep their specific colors */
+.btn {
+    color: inherit;
+}
+
+.btn-primary {
+    color: white !important;
+}
+
+.btn-success {
+    color: white !important;
+}
+
+.btn-outline-primary {
+    color: var(--text-primary) !important;
+}
+
+.btn-outline-secondary {
+    color: var(--text-primary) !important;
+}
+
+/* Light mode button text overrides */
+body.light-mode .btn-outline-primary {
+    color: var(--accent-primary) !important;
+}
+
+body.light-mode .btn-outline-secondary {
+    color: var(--accent-primary) !important;
+}
+
+/* Light mode button focus styles */
+
+
+/* Override default browser focus styles for all buttons */
+.btn:focus,
+.btn:focus-visible,
+.btn:focus-within {
+    box-shadow: none !important;
+    border-color: var(--accent-primary) !important;
+}
+
+.btn-outline-primary:focus,
+.btn-outline-primary:focus-visible {
+    outline: 2px solid white !important;
+    outline-offset: 2px !important;
+    box-shadow: none !important;
+    border-color: var(--accent-primary) !important;
+}
+
+.btn-outline-secondary:focus,
+.btn-outline-secondary:focus-visible {
+    outline: 2px solid white !important;
+    outline-offset: 2px !important;
+    box-shadow: none !important;
+    border-color: var(--border-color) !important;
+}
+
+.btn-primary:focus,
+.btn-primary:focus-visible {
+    outline: 2px solid white !important;
+    outline-offset: 2px !important;
+    box-shadow: none !important;
+}
+
+body.light-mode .btn:focus,
+body.light-mode .btn:focus-visible {
+    outline-color: black !important;
+}
+
+body.light-mode .btn-outline-primary:focus,
+body.light-mode .btn-outline-primary:focus-visible {
+    outline: 2px solid black !important;
+    outline-offset: 2px !important;
+    color: var(--text-primary) !important;
+}
+
+body.light-mode .btn-outline-secondary:focus,
+body.light-mode .btn-outline-secondary:focus-visible {
+    outline: 2px solid black !important;
+    outline-offset: 2px !important;
+}
+
+body.light-mode .btn-primary:focus,
+body.light-mode .btn-primary:focus-visible {
+    outline: 2px solid black !important;
+    outline-offset: 2px !important;
+}
+
+/* Nuclear option - override ALL possible focus states including anchors */
+button:focus,
+button:focus-visible,
+.btn:focus,
+.btn:focus-visible,
+a.btn:focus,
+a.btn:focus-visible,
+input[type="button"]:focus,
+input[type="button"]:focus-visible,
+input[type="submit"]:focus,
+input[type="submit"]:focus-visible,
+a:focus,
+a:focus-visible {
+    outline: 2px solid white !important;
+    outline-offset: 2px !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    border-color: var(--accent-primary) !important;
+}
+
+/* Specific anchor button overrides */
+a.btn-outline-primary:focus,
+a.btn-outline-primary:focus-visible {
+    outline: none !important;
+    outline-offset: 2px !important;
+    box-shadow: none !important;
+    color: var(--text-primary) !important;
+    text-decoration: none !important;
+}
+
+a.btn-outline-secondary:focus,
+a.btn-outline-secondary:focus-visible {
+    outline: none !important;
+    outline-offset: 2px !important;
+    box-shadow: none !important;
+    color: var(--text-primary) !important;
+    text-decoration: none !important;
+}
+
+body.light-mode button:focus,
+body.light-mode button:focus-visible,
+body.light-mode .btn:focus,
+body.light-mode .btn:focus-visible,
+body.light-mode a.btn:focus,
+body.light-mode a.btn:focus-visible,
+body.light-mode input[type="button"]:focus,
+body.light-mode input[type="button"]:focus-visible,
+body.light-mode input[type="submit"]:focus,
+body.light-mode input[type="submit"]:focus-visible,
+body.light-mode a:focus,
+body.light-mode a:focus-visible {
+    outline: 2px solid black !important;
+    outline-offset: 2px !important;
+}
+
+/* Light mode anchor button overrides */
+body.light-mode a.btn-outline-primary:focus,
+body.light-mode a.btn-outline-primary:focus-visible {
+    outline: 2px solid black !important;
+    outline-offset: 2px !important;
+    color: var(--accent-primary) !important;
+}
+
+body.light-mode a.btn-outline-secondary:focus,
+body.light-mode a.btn-outline-secondary:focus-visible {
+    outline: 2px solid black !important;
+    outline-offset: 2px !important;
+    color: var(--text-primary-light) !important;
+}
+
+/* Anchor buttons styled as buttons */
+a.btn-outline-primary {
+    color: var(--text-primary) !important;
+    text-decoration: none !important;
+}
+
+a.btn-outline-primary:hover {
+    background: var(--accent-primary) !important;
+    border-color: var(--accent-primary) !important;
+    color: white !important;
+    text-decoration: none !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(157, 130, 85, 0.3);
+}
+
+a.btn-outline-secondary {
+    color: var(--text-primary) !important;
+    text-decoration: none !important;
+}
+
+a.btn-outline-secondary:hover {
+    background: var(--accent-primary) !important;
+    border-color: var(--accent-primary) !important;
+    color: white !important;
+    text-decoration: none !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(157, 130, 85, 0.3);
+}
+
+/* Light mode anchor button styles */
+body.light-mode a.btn-outline-primary {
+    color: var(--accent-primary) !important;
+}
+
+body.light-mode a.btn-outline-primary:hover {
+    background: var(--accent-primary) !important;
+    border-color: var(--accent-primary) !important;
+    color: white !important;
+}
+
+body.light-mode a.btn-outline-secondary {
+    color: var(--accent-primary) !important;
+}
+
+body.light-mode a.btn-outline-secondary:hover {
+    background: var(--accent-primary) !important;
+    border-color: var(--accent-primary) !important;
+    color: white !important;
+}
+
+/* FOCUSED anchor outline overrides only */
+a:focus,
+a:focus-visible,
+a.btn:focus,
+a.btn:focus-visible,
+a.btn-outline-primary:focus,
+a.btn-outline-primary:focus-visible,
+a.btn-outline-secondary:focus,
+a.btn-outline-secondary:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+}
+
+body.light-mode a:focus,
+body.light-mode a:focus-visible,
+body.light-mode a.btn:focus,
+body.light-mode a.btn:focus-visible,
+body.light-mode a.btn-outline-primary:focus,
+body.light-mode a.btn-outline-primary:focus-visible,
+body.light-mode a.btn-outline-secondary:focus,
+body.light-mode a.btn-outline-secondary:focus-visible {
+    outline: none !important;
+}
+
+/* Links */
+a {
+    color: var(--accent-primary) !important;
+}
+
+a:hover {
+    color: var(--accent-secondary) !important;
+}
+
+/* Badges - keep their specific colors */
+.badge {
+    color: black !important;
+}
+
+.badge.bg-warning {
+    color: black !important;
+}
+
+/* Specific fixes for problematic selectors */
+
+/* Fix plan.php plan details list */
+body > div.container > div > div.col-lg-4 > div:nth-child(3) > div.card-body > ul > li,
+body > div.container > div > div.col-lg-4 > div:nth-child(3) > div.card-body > ul > li *,
+.card-body ul li,
+.card-body ul li * {
+    color: var(--text-secondary) !important;
+}
+
+/* Fix plan.php recent readings content */
+body > div.container > div > div.col-lg-8 > div:nth-child(2) > div.card-body > div:nth-child(1) > div > div > div.col-md-6,
+body > div.container > div > div.col-lg-8 > div:nth-child(2) > div.card-body > div:nth-child(1) > div > div > div.col-md-6 *,
+.reading-card .col-md-6,
+.reading-card .col-md-6 *,
+.reading-card .card-body,
+.reading-card .card-body * {
+    color: var(--text-primary) !important;
+}
+
+/* Fix reading card small text specifically */
+.reading-card small,
+.reading-card .text-muted,
+.reading-card small.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Fix index.php interactive pane features */
+#interactive-pane > div.row.mb-3 > div:nth-child(2) > ul > li:nth-child(3),
+#interactive-pane > div.row.mb-3 > div:nth-child(2) > ul > li:nth-child(3) *,
+#interactive-pane ul li,
+#interactive-pane ul li *,
+.feature-list ul li small,
+.feature-list ul li small * {
+    color: var(--text-secondary) !important;
+}
+
+/* Additional specific overrides for common problem areas */
+.card-body ul,
+.card-body ul li,
+.card-body ol,
+.card-body ol li {
+    color: var(--text-secondary) !important;
+}
+
+.card-body .row .col-md-6,
+.card-body .row .col-md-6 *,
+.card-body .row .col-sm-6,
+.card-body .row .col-sm-6 * {
+    color: var(--text-primary) !important;
+}
+
+/* Override any remaining Bootstrap list styles */
+.list-unstyled li,
+.list-unstyled li * {
+    color: var(--text-secondary) !important;
+}
+
+/* Target specific IDs for maximum specificity */
+#feature-list-items,
+#feature-list-items li,
+#feature-list-items li *,
+#feature-list-items li strong {
+    color: var(--text-secondary) !important;
+}
+
+#feature-list-items li strong {
+    color: var(--text-primary) !important;
+}
+
+#interactive-features-list,
+#interactive-features-list li,
+#interactive-features-list li *,
+#interactive-features-list li small {
+    color: var(--text-secondary) !important;
+}
+
+/* Override any Bootstrap utility classes on these specific elements */
+#feature-list-items.text-muted,
+#feature-list-items.text-muted li,
+#interactive-features-list.list-unstyled li {
+    color: var(--text-secondary) !important;
+} 

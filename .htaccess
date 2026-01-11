@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Clean URLs for editing plans (must come BEFORE the general plan rule)
+# Converts /plan/abc123/edit to edit.php?id=abc123
+RewriteRule ^plan/([a-zA-Z0-9]+)/edit$ edit.php?id=$1 [L,QSA]
+RewriteRule ^plan/([a-zA-Z0-9]+)/edit/$ edit.php?id=$1 [L,QSA]
+
+# Clean URLs for reading plans
+# Converts /plan/abc123 to plan.php?id=abc123 (but NOT if it ends with /edit)
+RewriteCond %{REQUEST_URI} !^/schedule/plan/[a-zA-Z0-9]+/edit/?$
+RewriteRule ^plan/([a-zA-Z0-9]+)/?$ plan.php?id=$1 [L,QSA]
+
+# Optional: Redirect old format to new format
+RewriteCond %{QUERY_STRING} ^id=([a-zA-Z0-9]+)$
+RewriteRule ^plan\.php$ plan/%1? [R=301,L] 

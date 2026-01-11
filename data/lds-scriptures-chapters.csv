@@ -1,0 +1,1583 @@
+verse_id,volume_title,verse_title,word_count,verse_count
+1,"Old Testament","Genesis 1",797,31
+32,"Old Testament","Genesis 2",632,25
+57,"Old Testament","Genesis 3",695,24
+81,"Old Testament","Genesis 4",632,26
+107,"Old Testament","Genesis 5",505,32
+139,"Old Testament","Genesis 6",579,22
+161,"Old Testament","Genesis 7",584,24
+185,"Old Testament","Genesis 8",586,22
+207,"Old Testament","Genesis 9",658,29
+236,"Old Testament","Genesis 10",495,32
+268,"Old Testament","Genesis 11",606,32
+300,"Old Testament","Genesis 12",536,20
+320,"Old Testament","Genesis 13",457,18
+338,"Old Testament","Genesis 14",606,24
+362,"Old Testament","Genesis 15",471,21
+383,"Old Testament","Genesis 16",412,16
+399,"Old Testament","Genesis 17",679,27
+426,"Old Testament","Genesis 18",867,33
+459,"Old Testament","Genesis 19",1108,38
+497,"Old Testament","Genesis 20",498,18
+515,"Old Testament","Genesis 21",774,34
+549,"Old Testament","Genesis 22",629,24
+573,"Old Testament","Genesis 23",539,20
+593,"Old Testament","Genesis 24",1816,67
+660,"Old Testament","Genesis 25",706,34
+694,"Old Testament","Genesis 26",889,35
+729,"Old Testament","Genesis 27",1262,46
+775,"Old Testament","Genesis 28",621,22
+797,"Old Testament","Genesis 29",830,35
+832,"Old Testament","Genesis 30",1022,43
+875,"Old Testament","Genesis 31",1417,55
+930,"Old Testament","Genesis 32",794,32
+962,"Old Testament","Genesis 33",508,20
+982,"Old Testament","Genesis 34",790,31
+1013,"Old Testament","Genesis 35",664,29
+1042,"Old Testament","Genesis 36",845,43
+1085,"Old Testament","Genesis 37",942,36
+1121,"Old Testament","Genesis 38",819,30
+1151,"Old Testament","Genesis 39",666,23
+1174,"Old Testament","Genesis 40",580,23
+1197,"Old Testament","Genesis 41",1404,57
+1254,"Old Testament","Genesis 42",977,38
+1292,"Old Testament","Genesis 43",938,34
+1326,"Old Testament","Genesis 44",874,34
+1360,"Old Testament","Genesis 45",731,28
+1388,"Old Testament","Genesis 46",766,34
+1422,"Old Testament","Genesis 47",965,31
+1453,"Old Testament","Genesis 48",639,22
+1475,"Old Testament","Genesis 49",766,33
+1508,"Old Testament","Genesis 50",687,26
+1534,"Old Testament","Exodus 1",457,22
+1556,"Old Testament","Exodus 2",657,25
+1581,"Old Testament","Exodus 3",791,22
+1603,"Old Testament","Exodus 4",891,31
+1634,"Old Testament","Exodus 5",594,23
+1657,"Old Testament","Exodus 6",753,30
+1687,"Old Testament","Exodus 7",692,25
+1712,"Old Testament","Exodus 8",936,32
+1744,"Old Testament","Exodus 9",982,35
+1779,"Old Testament","Exodus 10",899,29
+1808,"Old Testament","Exodus 11",324,10
+1818,"Old Testament","Exodus 12",1493,51
+1869,"Old Testament","Exodus 13",675,22
+1891,"Old Testament","Exodus 14",931,31
+1922,"Old Testament","Exodus 15",713,27
+1949,"Old Testament","Exodus 16",1062,36
+1985,"Old Testament","Exodus 17",465,16
+2001,"Old Testament","Exodus 18",760,27
+2028,"Old Testament","Exodus 19",702,25
+2053,"Old Testament","Exodus 20",561,26
+2079,"Old Testament","Exodus 21",893,36
+2115,"Old Testament","Exodus 22",790,31
+2146,"Old Testament","Exodus 23",828,33
+2179,"Old Testament","Exodus 24",492,18
+2197,"Old Testament","Exodus 25",926,40
+2237,"Old Testament","Exodus 26",937,37
+2274,"Old Testament","Exodus 27",558,21
+2295,"Old Testament","Exodus 28",1235,43
+2338,"Old Testament","Exodus 29",1341,46
+2384,"Old Testament","Exodus 30",970,38
+2422,"Old Testament","Exodus 31",438,18
+2440,"Old Testament","Exodus 32",1093,35
+2475,"Old Testament","Exodus 33",710,23
+2498,"Old Testament","Exodus 34",1004,35
+2533,"Old Testament","Exodus 35",820,35
+2568,"Old Testament","Exodus 36",892,38
+2606,"Old Testament","Exodus 37",738,29
+2635,"Old Testament","Exodus 38",832,31
+2666,"Old Testament","Exodus 39",1030,43
+2709,"Old Testament","Exodus 40",821,38
+2747,"Old Testament","Leviticus 1",525,17
+2764,"Old Testament","Leviticus 2",486,16
+2780,"Old Testament","Leviticus 3",511,17
+2797,"Old Testament","Leviticus 4",1157,35
+2832,"Old Testament","Leviticus 5",723,19
+2851,"Old Testament","Leviticus 6",892,30
+2881,"Old Testament","Leviticus 7",1056,38
+2919,"Old Testament","Leviticus 8",988,36
+2955,"Old Testament","Leviticus 9",624,24
+2979,"Old Testament","Leviticus 10",628,20
+2999,"Old Testament","Leviticus 11",1115,47
+3046,"Old Testament","Leviticus 12",262,8
+3054,"Old Testament","Leviticus 13",1857,59
+3113,"Old Testament","Leviticus 14",1713,57
+3170,"Old Testament","Leviticus 15",919,33
+3203,"Old Testament","Leviticus 16",1157,34
+3237,"Old Testament","Leviticus 17",553,16
+3253,"Old Testament","Leviticus 18",667,30
+3283,"Old Testament","Leviticus 19",898,37
+3320,"Old Testament","Leviticus 20",836,27
+3347,"Old Testament","Leviticus 21",587,24
+3371,"Old Testament","Leviticus 22",879,33
+3404,"Old Testament","Leviticus 23",1222,44
+3448,"Old Testament","Leviticus 24",551,23
+3471,"Old Testament","Leviticus 25",1532,55
+3526,"Old Testament","Leviticus 26",1247,46
+3572,"Old Testament","Leviticus 27",956,34
+3606,"Old Testament","Numbers 1",1333,54
+3660,"Old Testament","Numbers 2",828,34
+3694,"Old Testament","Numbers 3",1291,51
+3745,"Old Testament","Numbers 4",1416,49
+3794,"Old Testament","Numbers 5",898,31
+3825,"Old Testament","Numbers 6",742,27
+3852,"Old Testament","Numbers 7",1939,89
+3941,"Old Testament","Numbers 8",687,26
+3967,"Old Testament","Numbers 9",722,23
+3990,"Old Testament","Numbers 10",891,36
+4026,"Old Testament","Numbers 11",1056,35
+4061,"Old Testament","Numbers 12",384,16
+4077,"Old Testament","Numbers 13",741,33
+4110,"Old Testament","Numbers 14",1181,45
+4155,"Old Testament","Numbers 15",1068,41
+4196,"Old Testament","Numbers 16",1341,50
+4246,"Old Testament","Numbers 17",335,13
+4259,"Old Testament","Numbers 18",1112,32
+4291,"Old Testament","Numbers 19",683,22
+4313,"Old Testament","Numbers 20",792,29
+4342,"Old Testament","Numbers 21",931,35
+4377,"Old Testament","Numbers 22",1201,41
+4418,"Old Testament","Numbers 23",743,30
+4448,"Old Testament","Numbers 24",659,25
+4473,"Old Testament","Numbers 25",445,18
+4491,"Old Testament","Numbers 26",1446,65
+4556,"Old Testament","Numbers 27",610,23
+4579,"Old Testament","Numbers 28",779,31
+4610,"Old Testament","Numbers 29",954,40
+4650,"Old Testament","Numbers 30",503,16
+4666,"Old Testament","Numbers 31",1208,54
+4720,"Old Testament","Numbers 32",1009,42
+4762,"Old Testament","Numbers 33",928,56
+4818,"Old Testament","Numbers 34",630,29
+4847,"Old Testament","Numbers 35",965,34
+4881,"Old Testament","Numbers 36",445,13
+4894,"Old Testament","Deuteronomy 1",1262,46
+4940,"Old Testament","Deuteronomy 2",1021,37
+4977,"Old Testament","Deuteronomy 3",815,29
+5006,"Old Testament","Deuteronomy 4",1503,49
+5055,"Old Testament","Deuteronomy 5",921,33
+5088,"Old Testament","Deuteronomy 6",643,25
+5113,"Old Testament","Deuteronomy 7",843,26
+5139,"Old Testament","Deuteronomy 8",566,20
+5159,"Old Testament","Deuteronomy 9",963,29
+5188,"Old Testament","Deuteronomy 10",604,22
+5210,"Old Testament","Deuteronomy 11",950,32
+5242,"Old Testament","Deuteronomy 12",1055,32
+5274,"Old Testament","Deuteronomy 13",627,18
+5292,"Old Testament","Deuteronomy 14",708,29
+5321,"Old Testament","Deuteronomy 15",707,23
+5344,"Old Testament","Deuteronomy 16",710,22
+5366,"Old Testament","Deuteronomy 17",707,20
+5386,"Old Testament","Deuteronomy 18",611,22
+5408,"Old Testament","Deuteronomy 19",608,21
+5429,"Old Testament","Deuteronomy 20",646,20
+5449,"Old Testament","Deuteronomy 21",731,23
+5472,"Old Testament","Deuteronomy 22",894,30
+5502,"Old Testament","Deuteronomy 23",685,25
+5527,"Old Testament","Deuteronomy 24",681,22
+5549,"Old Testament","Deuteronomy 25",562,19
+5568,"Old Testament","Deuteronomy 26",667,19
+5587,"Old Testament","Deuteronomy 27",599,26
+5613,"Old Testament","Deuteronomy 28",2075,68
+5681,"Old Testament","Deuteronomy 29",851,29
+5710,"Old Testament","Deuteronomy 30",665,20
+5730,"Old Testament","Deuteronomy 31",1041,30
+5760,"Old Testament","Deuteronomy 32",1306,52
+5812,"Old Testament","Deuteronomy 33",805,29
+5841,"Old Testament","Deuteronomy 34",320,12
+5853,"Old Testament","Joshua 1",573,18
+5871,"Old Testament","Joshua 2",768,24
+5895,"Old Testament","Joshua 3",566,17
+5912,"Old Testament","Joshua 4",707,24
+5936,"Old Testament","Joshua 5",550,15
+5951,"Old Testament","Joshua 6",904,27
+5978,"Old Testament","Joshua 7",927,26
+6004,"Old Testament","Joshua 8",1222,35
+6039,"Old Testament","Joshua 9",800,27
+6066,"Old Testament","Joshua 10",1393,43
+6109,"Old Testament","Joshua 11",717,23
+6132,"Old Testament","Joshua 12",486,24
+6156,"Old Testament","Joshua 13",825,33
+6189,"Old Testament","Joshua 14",485,15
+6204,"Old Testament","Joshua 15",1032,63
+6267,"Old Testament","Joshua 16",253,10
+6277,"Old Testament","Joshua 17",660,18
+6295,"Old Testament","Joshua 18",770,28
+6323,"Old Testament","Joshua 19",944,51
+6374,"Old Testament","Joshua 20",308,9
+6383,"Old Testament","Joshua 21",1026,45
+6428,"Old Testament","Joshua 22",1321,34
+6462,"Old Testament","Joshua 23",574,16
+6478,"Old Testament","Joshua 24",1044,33
+6511,"Old Testament","Judges 1",962,36
+6547,"Old Testament","Judges 2",692,23
+6570,"Old Testament","Judges 3",842,31
+6601,"Old Testament","Judges 4",761,24
+6625,"Old Testament","Judges 5",755,31
+6656,"Old Testament","Judges 6",1295,40
+6696,"Old Testament","Judges 7",952,25
+6721,"Old Testament","Judges 8",987,35
+6756,"Old Testament","Judges 9",1667,57
+6813,"Old Testament","Judges 10",473,18
+6831,"Old Testament","Judges 11",1235,40
+6871,"Old Testament","Judges 12",399,15
+6886,"Old Testament","Judges 13",765,25
+6911,"Old Testament","Judges 14",706,20
+6931,"Old Testament","Judges 15",648,20
+6951,"Old Testament","Judges 16",1110,31
+6982,"Old Testament","Judges 17",385,13
+6995,"Old Testament","Judges 18",1035,31
+7026,"Old Testament","Judges 19",1102,30
+7056,"Old Testament","Judges 20",1455,48
+7104,"Old Testament","Judges 21",740,25
+7129,"Old Testament","Ruth 1",649,22
+7151,"Old Testament","Ruth 2",763,23
+7174,"Old Testament","Ruth 3",541,18
+7192,"Old Testament","Ruth 4",621,22
+7214,"Old Testament","1 Samuel 1",782,28
+7242,"Old Testament","1 Samuel 2",1104,36
+7278,"Old Testament","1 Samuel 3",549,21
+7299,"Old Testament","1 Samuel 4",733,22
+7321,"Old Testament","1 Samuel 5",439,12
+7333,"Old Testament","1 Samuel 6",752,21
+7354,"Old Testament","1 Samuel 7",510,17
+7371,"Old Testament","1 Samuel 8",541,22
+7393,"Old Testament","1 Samuel 9",990,27
+7420,"Old Testament","1 Samuel 10",863,27
+7447,"Old Testament","1 Samuel 11",503,15
+7462,"Old Testament","1 Samuel 12",771,25
+7487,"Old Testament","1 Samuel 13",697,23
+7510,"Old Testament","1 Samuel 14",1606,52
+7562,"Old Testament","1 Samuel 15",981,35
+7597,"Old Testament","1 Samuel 16",680,23
+7620,"Old Testament","1 Samuel 17",1719,58
+7678,"Old Testament","1 Samuel 18",845,30
+7708,"Old Testament","1 Samuel 19",696,24
+7732,"Old Testament","1 Samuel 20",1289,42
+7774,"Old Testament","1 Samuel 21",499,15
+7789,"Old Testament","1 Samuel 22",761,23
+7812,"Old Testament","1 Samuel 23",831,29
+7841,"Old Testament","1 Samuel 24",661,22
+7863,"Old Testament","1 Samuel 25",1452,44
+7907,"Old Testament","1 Samuel 26",849,25
+7932,"Old Testament","1 Samuel 27",385,12
+7944,"Old Testament","1 Samuel 28",835,25
+7969,"Old Testament","1 Samuel 29",421,11
+7980,"Old Testament","1 Samuel 30",956,31
+8011,"Old Testament","1 Samuel 31",348,13
+8024,"Old Testament","2 Samuel 1",713,27
+8051,"Old Testament","2 Samuel 2",911,32
+8083,"Old Testament","2 Samuel 3",1143,39
+8122,"Old Testament","2 Samuel 4",434,12
+8134,"Old Testament","2 Samuel 5",624,25
+8159,"Old Testament","2 Samuel 6",713,23
+8182,"Old Testament","2 Samuel 7",858,29
+8211,"Old Testament","2 Samuel 8",447,18
+8229,"Old Testament","2 Samuel 9",408,13
+8242,"Old Testament","2 Samuel 10",608,19
+8261,"Old Testament","2 Samuel 11",814,27
+8288,"Old Testament","2 Samuel 12",992,31
+8319,"Old Testament","2 Samuel 13",1149,39
+8358,"Old Testament","2 Samuel 14",1117,33
+8391,"Old Testament","2 Samuel 15",1118,37
+8428,"Old Testament","2 Samuel 16",738,23
+8451,"Old Testament","2 Samuel 17",935,29
+8480,"Old Testament","2 Samuel 18",1096,33
+8513,"Old Testament","2 Samuel 19",1473,43
+8556,"Old Testament","2 Samuel 20",848,26
+8582,"Old Testament","2 Samuel 21",778,22
+8604,"Old Testament","2 Samuel 22",951,51
+8655,"Old Testament","2 Samuel 23",878,39
+8694,"Old Testament","2 Samuel 24",855,25
+8719,"Old Testament","1 Kings 1",1500,53
+8772,"Old Testament","1 Kings 2",1510,46
+8818,"Old Testament","1 Kings 3",850,28
+8846,"Old Testament","1 Kings 4",706,34
+8880,"Old Testament","1 Kings 5",527,18
+8898,"Old Testament","1 Kings 6",1018,38
+8936,"Old Testament","1 Kings 7",1482,51
+8987,"Old Testament","1 Kings 8",2139,66
+9053,"Old Testament","1 Kings 9",826,28
+9081,"Old Testament","1 Kings 10",839,29
+9110,"Old Testament","1 Kings 11",1253,43
+9153,"Old Testament","1 Kings 12",1038,33
+9186,"Old Testament","1 Kings 13",1138,34
+9220,"Old Testament","1 Kings 14",987,31
+9251,"Old Testament","1 Kings 15",951,34
+9285,"Old Testament","1 Kings 16",1035,34
+9319,"Old Testament","1 Kings 17",680,24
+9343,"Old Testament","1 Kings 18",1397,46
+9389,"Old Testament","1 Kings 19",732,21
+9410,"Old Testament","1 Kings 20",1481,43
+9453,"Old Testament","1 Kings 21",908,29
+9482,"Old Testament","1 Kings 22",1517,53
+9535,"Old Testament","2 Kings 1",669,18
+9553,"Old Testament","2 Kings 2",848,25
+9578,"Old Testament","2 Kings 3",848,27
+9605,"Old Testament","2 Kings 4",1369,44
+9649,"Old Testament","2 Kings 5",974,27
+9676,"Old Testament","2 Kings 6",1019,33
+9709,"Old Testament","2 Kings 7",824,20
+9729,"Old Testament","2 Kings 8",953,29
+9758,"Old Testament","2 Kings 9",1205,37
+9795,"Old Testament","2 Kings 10",1203,36
+9831,"Old Testament","2 Kings 11",738,21
+9852,"Old Testament","2 Kings 12",688,21
+9873,"Old Testament","2 Kings 13",775,25
+9898,"Old Testament","2 Kings 14",881,29
+9927,"Old Testament","2 Kings 15",1092,38
+9965,"Old Testament","2 Kings 16",656,20
+9985,"Old Testament","2 Kings 17",1245,41
+10026,"Old Testament","2 Kings 18",1220,37
+10063,"Old Testament","2 Kings 19",1147,37
+10100,"Old Testament","2 Kings 20",660,21
+10121,"Old Testament","2 Kings 21",747,26
+10147,"Old Testament","2 Kings 22",712,20
+10167,"Old Testament","2 Kings 23",1477,37
+10204,"Old Testament","2 Kings 24",584,20
+10224,"Old Testament","2 Kings 25",982,30
+10254,"Old Testament","1 Chronicles 1",683,54
+10308,"Old Testament","1 Chronicles 2",846,55
+10363,"Old Testament","1 Chronicles 3",347,24
+10387,"Old Testament","1 Chronicles 4",852,43
+10430,"Old Testament","1 Chronicles 5",664,26
+10456,"Old Testament","1 Chronicles 6",1341,81
+10537,"Old Testament","1 Chronicles 7",831,40
+10577,"Old Testament","1 Chronicles 8",491,40
+10617,"Old Testament","1 Chronicles 9",960,44
+10661,"Old Testament","1 Chronicles 10",364,14
+10675,"Old Testament","1 Chronicles 11",944,47
+10722,"Old Testament","1 Chronicles 12",987,40
+10762,"Old Testament","1 Chronicles 13",386,14
+10776,"Old Testament","1 Chronicles 14",357,17
+10793,"Old Testament","1 Chronicles 15",714,29
+10822,"Old Testament","1 Chronicles 16",850,43
+10865,"Old Testament","1 Chronicles 17",779,27
+10892,"Old Testament","1 Chronicles 18",399,17
+10909,"Old Testament","1 Chronicles 19",630,19
+10928,"Old Testament","1 Chronicles 20",289,8
+10936,"Old Testament","1 Chronicles 21",914,30
+10966,"Old Testament","1 Chronicles 22",605,19
+10985,"Old Testament","1 Chronicles 23",681,32
+11017,"Old Testament","1 Chronicles 24",541,31
+11048,"Old Testament","1 Chronicles 25",543,31
+11079,"Old Testament","1 Chronicles 26",710,32
+11111,"Old Testament","1 Chronicles 27",805,34
+11145,"Old Testament","1 Chronicles 28",864,21
+11166,"Old Testament","1 Chronicles 29",988,30
+11196,"Old Testament","2 Chronicles 1",530,17
+11213,"Old Testament","2 Chronicles 2",645,18
+11231,"Old Testament","2 Chronicles 3",481,17
+11248,"Old Testament","2 Chronicles 4",595,22
+11270,"Old Testament","2 Chronicles 5",497,14
+11284,"Old Testament","2 Chronicles 6",1402,42
+11326,"Old Testament","2 Chronicles 7",748,22
+11348,"Old Testament","2 Chronicles 8",536,18
+11366,"Old Testament","2 Chronicles 9",882,31
+11397,"Old Testament","2 Chronicles 10",560,19
+11416,"Old Testament","2 Chronicles 11",486,23
+11439,"Old Testament","2 Chronicles 12",481,16
+11455,"Old Testament","2 Chronicles 13",642,22
+11477,"Old Testament","2 Chronicles 14",448,15
+11492,"Old Testament","2 Chronicles 15",518,19
+11511,"Old Testament","2 Chronicles 16",479,14
+11525,"Old Testament","2 Chronicles 17",459,19
+11544,"Old Testament","2 Chronicles 18",1050,34
+11578,"Old Testament","2 Chronicles 19",352,11
+11589,"Old Testament","2 Chronicles 20",1148,37
+11626,"Old Testament","2 Chronicles 21",623,20
+11646,"Old Testament","2 Chronicles 22",444,12
+11658,"Old Testament","2 Chronicles 23",788,21
+11679,"Old Testament","2 Chronicles 24",933,27
+11706,"Old Testament","2 Chronicles 25",970,28
+11734,"Old Testament","2 Chronicles 26",721,23
+11757,"Old Testament","2 Chronicles 27",244,9
+11766,"Old Testament","2 Chronicles 28",896,27
+11793,"Old Testament","2 Chronicles 29",1157,36
+11829,"Old Testament","2 Chronicles 30",869,27
+11856,"Old Testament","2 Chronicles 31",757,21
+11877,"Old Testament","2 Chronicles 32",1084,33
+11910,"Old Testament","2 Chronicles 33",774,25
+11935,"Old Testament","2 Chronicles 34",1216,33
+11968,"Old Testament","2 Chronicles 35",900,27
+11995,"Old Testament","2 Chronicles 36",741,23
+12018,"Old Testament","Ezra 1",371,11
+12029,"Old Testament","Ezra 2",998,70
+12099,"Old Testament","Ezra 3",547,13
+12112,"Old Testament","Ezra 4",769,24
+12136,"Old Testament","Ezra 5",583,17
+12153,"Old Testament","Ezra 6",778,22
+12175,"Old Testament","Ezra 7",863,28
+12203,"Old Testament","Ezra 8",990,36
+12239,"Old Testament","Ezra 9",617,15
+12254,"Old Testament","Ezra 10",924,44
+12298,"Old Testament","Nehemiah 1",390,11
+12309,"Old Testament","Nehemiah 2",718,20
+12329,"Old Testament","Nehemiah 3",896,32
+12361,"Old Testament","Nehemiah 4",716,23
+12384,"Old Testament","Nehemiah 5",636,19
+12403,"Old Testament","Nehemiah 6",602,19
+12422,"Old Testament","Nehemiah 7",1176,73
+12495,"Old Testament","Nehemiah 8",686,18
+12513,"Old Testament","Nehemiah 9",1328,38
+12551,"Old Testament","Nehemiah 10",652,39
+12590,"Old Testament","Nehemiah 11",788,36
+12626,"Old Testament","Nehemiah 12",930,47
+12673,"Old Testament","Nehemiah 13",962,31
+12704,"Old Testament","Esther 1",716,22
+12726,"Old Testament","Esther 2",806,23
+12749,"Old Testament","Esther 3",552,15
+12764,"Old Testament","Esther 4",517,17
+12781,"Old Testament","Esther 5",493,14
+12795,"Old Testament","Esther 6",476,14
+12809,"Old Testament","Esther 7",345,10
+12819,"Old Testament","Esther 8",650,17
+12836,"Old Testament","Esther 9",984,32
+12868,"Old Testament","Esther 10",93,3
+12871,"Old Testament","Job 1",641,22
+12893,"Old Testament","Job 2",387,13
+12906,"Old Testament","Job 3",434,26
+12932,"Old Testament","Job 4",336,21
+12953,"Old Testament","Job 5",446,27
+12980,"Old Testament","Job 6",482,30
+13010,"Old Testament","Job 7",394,21
+13031,"Old Testament","Job 8",340,22
+13053,"Old Testament","Job 9",544,35
+13088,"Old Testament","Job 10",402,22
+13110,"Old Testament","Job 11",337,20
+13130,"Old Testament","Job 12",399,25
+13155,"Old Testament","Job 13",413,28
+13183,"Old Testament","Job 14",410,22
+13205,"Old Testament","Job 15",549,35
+13240,"Old Testament","Job 16",375,22
+13262,"Old Testament","Job 17",262,16
+13278,"Old Testament","Job 18",342,21
+13299,"Old Testament","Job 19",475,29
+13328,"Old Testament","Job 20",521,29
+13357,"Old Testament","Job 21",522,34
+13391,"Old Testament","Job 22",482,30
+13421,"Old Testament","Job 23",280,17
+13438,"Old Testament","Job 24",481,25
+13463,"Old Testament","Job 25",90,6
+13469,"Old Testament","Job 26",206,14
+13483,"Old Testament","Job 27",373,23
+13506,"Old Testament","Job 28",455,28
+13534,"Old Testament","Job 29",404,25
+13559,"Old Testament","Job 30",514,31
+13590,"Old Testament","Job 31",691,40
+13630,"Old Testament","Job 32",375,22
+13652,"Old Testament","Job 33",525,33
+13685,"Old Testament","Job 34",615,37
+13722,"Old Testament","Job 35",254,16
+13738,"Old Testament","Job 36",495,33
+13771,"Old Testament","Job 37",402,24
+13795,"Old Testament","Job 38",659,41
+13836,"Old Testament","Job 39",477,30
+13866,"Old Testament","Job 40",361,24
+13890,"Old Testament","Job 41",507,34
+13924,"Old Testament","Job 42",441,17
+13941,"Old Testament","Psalms 1",130,6
+13947,"Old Testament","Psalms 2",206,12
+13959,"Old Testament","Psalms 3",139,8
+13967,"Old Testament","Psalms 4",165,8
+13975,"Old Testament","Psalms 5",245,12
+13987,"Old Testament","Psalms 6",159,10
+13997,"Old Testament","Psalms 7",327,17
+14014,"Old Testament","Psalms 8",166,9
+14023,"Old Testament","Psalms 9",367,20
+14043,"Old Testament","Psalms 10",350,18
+14061,"Old Testament","Psalms 11",128,7
+14068,"Old Testament","Psalms 12",147,8
+14076,"Old Testament","Psalms 13",107,6
+14082,"Old Testament","Psalms 14",149,7
+14089,"Old Testament","Psalms 15",99,5
+14094,"Old Testament","Psalms 16",206,11
+14105,"Old Testament","Psalms 17",311,15
+14120,"Old Testament","Psalms 18",918,50
+14170,"Old Testament","Psalms 19",272,14
+14184,"Old Testament","Psalms 20",144,9
+14193,"Old Testament","Psalms 21",246,13
+14206,"Old Testament","Psalms 22",580,31
+14237,"Old Testament","Psalms 23",118,6
+14243,"Old Testament","Psalms 24",178,10
+14253,"Old Testament","Psalms 25",342,22
+14275,"Old Testament","Psalms 26",183,12
+14287,"Old Testament","Psalms 27",340,14
+14301,"Old Testament","Psalms 28",201,9
+14310,"Old Testament","Psalms 29",179,11
+14321,"Old Testament","Psalms 30",231,12
+14333,"Old Testament","Psalms 31",498,24
+14357,"Old Testament","Psalms 32",241,11
+14368,"Old Testament","Psalms 33",350,22
+14390,"Old Testament","Psalms 34",347,22
+14412,"Old Testament","Psalms 35",564,28
+14440,"Old Testament","Psalms 36",223,12
+14452,"Old Testament","Psalms 37",702,40
+14492,"Old Testament","Psalms 38",361,22
+14514,"Old Testament","Psalms 39",270,13
+14527,"Old Testament","Psalms 40",400,17
+14544,"Old Testament","Psalms 41",239,13
+14557,"Old Testament","Psalms 42",280,11
+14568,"Old Testament","Psalms 43",130,5
+14573,"Old Testament","Psalms 44",451,26
+14599,"Old Testament","Psalms 45",327,17
+14616,"Old Testament","Psalms 46",204,11
+14627,"Old Testament","Psalms 47",143,9
+14636,"Old Testament","Psalms 48",229,14
+14650,"Old Testament","Psalms 49",337,20
+14670,"Old Testament","Psalms 50",400,23
+14693,"Old Testament","Psalms 51",322,19
+14712,"Old Testament","Psalms 52",165,9
+14721,"Old Testament","Psalms 53",152,6
+14727,"Old Testament","Psalms 54",110,7
+14734,"Old Testament","Psalms 55",435,23
+14757,"Old Testament","Psalms 56",225,13
+14770,"Old Testament","Psalms 57",230,11
+14781,"Old Testament","Psalms 58",218,11
+14792,"Old Testament","Psalms 59",339,17
+14809,"Old Testament","Psalms 60",211,12
+14821,"Old Testament","Psalms 61",133,8
+14829,"Old Testament","Psalms 62",228,12
+14841,"Old Testament","Psalms 63",194,11
+14852,"Old Testament","Psalms 64",184,10
+14862,"Old Testament","Psalms 65",267,13
+14875,"Old Testament","Psalms 66",327,20
+14895,"Old Testament","Psalms 67",111,7
+14902,"Old Testament","Psalms 68",698,35
+14937,"Old Testament","Psalms 69",669,36
+14973,"Old Testament","Psalms 70",102,5
+14978,"Old Testament","Psalms 71",471,24
+15002,"Old Testament","Psalms 72",369,20
+15022,"Old Testament","Psalms 73",423,28
+15050,"Old Testament","Psalms 74",413,23
+15073,"Old Testament","Psalms 75",189,10
+15083,"Old Testament","Psalms 76",193,12
+15095,"Old Testament","Psalms 77",330,20
+15115,"Old Testament","Psalms 78",1225,72
+15187,"Old Testament","Psalms 79",277,13
+15200,"Old Testament","Psalms 80",334,19
+15219,"Old Testament","Psalms 81",288,16
+15235,"Old Testament","Psalms 82",116,8
+15243,"Old Testament","Psalms 83",273,18
+15261,"Old Testament","Psalms 84",226,12
+15273,"Old Testament","Psalms 85",207,13
+15286,"Old Testament","Psalms 86",312,17
+15303,"Old Testament","Psalms 87",113,7
+15310,"Old Testament","Psalms 88",296,18
+15328,"Old Testament","Psalms 89",879,52
+15380,"Old Testament","Psalms 90",320,17
+15397,"Old Testament","Psalms 91",288,16
+15413,"Old Testament","Psalms 92",258,15
+15428,"Old Testament","Psalms 93",92,5
+15433,"Old Testament","Psalms 94",356,23
+15456,"Old Testament","Psalms 95",199,11
+15467,"Old Testament","Psalms 96",226,13
+15480,"Old Testament","Psalms 97",189,12
+15492,"Old Testament","Psalms 98",170,9
+15501,"Old Testament","Psalms 99",157,9
+15510,"Old Testament","Psalms 100",86,5
+15515,"Old Testament","Psalms 101",173,8
+15523,"Old Testament","Psalms 102",455,28
+15551,"Old Testament","Psalms 103",342,22
+15573,"Old Testament","Psalms 104",598,35
+15608,"Old Testament","Psalms 105",632,45
+15653,"Old Testament","Psalms 106",762,48
+15701,"Old Testament","Psalms 107",685,43
+15744,"Old Testament","Psalms 108",206,13
+15757,"Old Testament","Psalms 109",534,31
+15788,"Old Testament","Psalms 110",142,7
+15795,"Old Testament","Psalms 111",177,10
+15805,"Old Testament","Psalms 112",172,10
+15815,"Old Testament","Psalms 113",142,9
+15824,"Old Testament","Psalms 114",106,8
+15832,"Old Testament","Psalms 115",274,18
+15850,"Old Testament","Psalms 116",287,19
+15869,"Old Testament","Psalms 117",33,2
+15871,"Old Testament","Psalms 118",465,29
+15900,"Old Testament","Psalms 119",2423,176
+16076,"Old Testament","Psalms 120",88,7
+16083,"Old Testament","Psalms 121",110,8
+16091,"Old Testament","Psalms 122",124,9
+16100,"Old Testament","Psalms 123",94,4
+16104,"Old Testament","Psalms 124",121,8
+16112,"Old Testament","Psalms 125",108,5
+16117,"Old Testament","Psalms 126",94,6
+16123,"Old Testament","Psalms 127",110,5
+16128,"Old Testament","Psalms 128",101,6
+16134,"Old Testament","Psalms 129",119,8
+16142,"Old Testament","Psalms 130",116,8
+16150,"Old Testament","Psalms 131",60,3
+16153,"Old Testament","Psalms 132",276,18
+16171,"Old Testament","Psalms 133",69,3
+16174,"Old Testament","Psalms 134",44,3
+16177,"Old Testament","Psalms 135",329,21
+16198,"Old Testament","Psalms 136",353,26
+16224,"Old Testament","Psalms 137",165,9
+16233,"Old Testament","Psalms 138",172,8
+16241,"Old Testament","Psalms 139",410,24
+16265,"Old Testament","Psalms 140",239,13
+16278,"Old Testament","Psalms 141",203,10
+16288,"Old Testament","Psalms 142",151,7
+16295,"Old Testament","Psalms 143",252,12
+16307,"Old Testament","Psalms 144",302,15
+16322,"Old Testament","Psalms 145",331,21
+16343,"Old Testament","Psalms 146",178,10
+16353,"Old Testament","Psalms 147",299,20
+16373,"Old Testament","Psalms 148",202,14
+16387,"Old Testament","Psalms 149",143,9
+16396,"Old Testament","Psalms 150",85,6
+16402,"Old Testament","Proverbs 1",519,33
+16435,"Old Testament","Proverbs 2",309,22
+16457,"Old Testament","Proverbs 3",541,35
+16492,"Old Testament","Proverbs 4",418,27
+16519,"Old Testament","Proverbs 5",354,23
+16542,"Old Testament","Proverbs 6",546,35
+16577,"Old Testament","Proverbs 7",411,27
+16604,"Old Testament","Proverbs 8",562,36
+16640,"Old Testament","Proverbs 9",288,18
+16658,"Old Testament","Proverbs 10",527,32
+16690,"Old Testament","Proverbs 11",524,31
+16721,"Old Testament","Proverbs 12",476,28
+16749,"Old Testament","Proverbs 13",400,25
+16774,"Old Testament","Proverbs 14",572,35
+16809,"Old Testament","Proverbs 15",544,33
+16842,"Old Testament","Proverbs 16",543,33
+16875,"Old Testament","Proverbs 17",476,28
+16903,"Old Testament","Proverbs 18",381,24
+16927,"Old Testament","Proverbs 19",506,29
+16956,"Old Testament","Proverbs 20",498,30
+16986,"Old Testament","Proverbs 21",501,31
+17017,"Old Testament","Proverbs 22",495,29
+17046,"Old Testament","Proverbs 23",566,35
+17081,"Old Testament","Proverbs 24",580,34
+17115,"Old Testament","Proverbs 25",522,28
+17143,"Old Testament","Proverbs 26",459,28
+17171,"Old Testament","Proverbs 27",460,27
+17198,"Old Testament","Proverbs 28",528,28
+17226,"Old Testament","Proverbs 29",425,27
+17253,"Old Testament","Proverbs 30",640,33
+17286,"Old Testament","Proverbs 31",467,31
+17317,"Old Testament","Ecclesiastes 1",380,18
+17335,"Old Testament","Ecclesiastes 2",734,26
+17361,"Old Testament","Ecclesiastes 3",517,22
+17383,"Old Testament","Ecclesiastes 4",380,16
+17399,"Old Testament","Ecclesiastes 5",533,20
+17419,"Old Testament","Ecclesiastes 6",301,12
+17431,"Old Testament","Ecclesiastes 7",617,29
+17460,"Old Testament","Ecclesiastes 8",515,17
+17477,"Old Testament","Ecclesiastes 9",555,18
+17495,"Old Testament","Ecclesiastes 10",402,20
+17515,"Old Testament","Ecclesiastes 11",273,10
+17525,"Old Testament","Ecclesiastes 12",372,14
+17539,"Old Testament","Solomon's Song 1",326,17
+17556,"Old Testament","Solomon's Song 2",351,17
+17573,"Old Testament","Solomon's Song 3",287,11
+17584,"Old Testament","Solomon's Song 4",363,16
+17600,"Old Testament","Solomon's Song 5",397,16
+17616,"Old Testament","Solomon's Song 6",282,13
+17629,"Old Testament","Solomon's Song 7",292,13
+17642,"Old Testament","Solomon's Song 8",360,14
+17656,"Old Testament","Isaiah 1",758,31
+17687,"Old Testament","Isaiah 2",567,22
+17709,"Old Testament","Isaiah 3",587,26
+17735,"Old Testament","Isaiah 4",209,6
+17741,"Old Testament","Isaiah 5",863,30
+17771,"Old Testament","Isaiah 6",366,13
+17784,"Old Testament","Isaiah 7",693,25
+17809,"Old Testament","Isaiah 8",558,22
+17831,"Old Testament","Isaiah 9",599,21
+17852,"Old Testament","Isaiah 10",928,34
+17886,"Old Testament","Isaiah 11",519,16
+17902,"Old Testament","Isaiah 12",134,6
+17908,"Old Testament","Isaiah 13",576,22
+17930,"Old Testament","Isaiah 14",856,32
+17962,"Old Testament","Isaiah 15",266,9
+17971,"Old Testament","Isaiah 16",415,14
+17985,"Old Testament","Isaiah 17",428,14
+17999,"Old Testament","Isaiah 18",255,7
+18006,"Old Testament","Isaiah 19",730,25
+18031,"Old Testament","Isaiah 20",169,6
+18037,"Old Testament","Isaiah 21",417,17
+18054,"Old Testament","Isaiah 22",676,25
+18079,"Old Testament","Isaiah 23",469,18
+18097,"Old Testament","Isaiah 24",592,23
+18120,"Old Testament","Isaiah 25",381,12
+18132,"Old Testament","Isaiah 26",550,21
+18153,"Old Testament","Isaiah 27",405,13
+18166,"Old Testament","Isaiah 28",814,29
+18195,"Old Testament","Isaiah 29",742,24
+18219,"Old Testament","Isaiah 30",1059,33
+18252,"Old Testament","Isaiah 31",322,9
+18261,"Old Testament","Isaiah 32",436,20
+18281,"Old Testament","Isaiah 33",585,24
+18305,"Old Testament","Isaiah 34",522,17
+18322,"Old Testament","Isaiah 35",277,10
+18332,"Old Testament","Isaiah 36",690,22
+18354,"Old Testament","Isaiah 37",1131,38
+18392,"Old Testament","Isaiah 38",592,22
+18414,"Old Testament","Isaiah 39",268,8
+18422,"Old Testament","Isaiah 40",796,31
+18453,"Old Testament","Isaiah 41",804,29
+18482,"Old Testament","Isaiah 42",676,25
+18507,"Old Testament","Isaiah 43",711,28
+18535,"Old Testament","Isaiah 44",886,28
+18563,"Old Testament","Isaiah 45",774,25
+18588,"Old Testament","Isaiah 46",342,13
+18601,"Old Testament","Isaiah 47",471,15
+18616,"Old Testament","Isaiah 48",627,22
+18638,"Old Testament","Isaiah 49",867,26
+18664,"Old Testament","Isaiah 50",365,11
+18675,"Old Testament","Isaiah 51",771,23
+18698,"Old Testament","Isaiah 52",405,15
+18713,"Old Testament","Isaiah 53",387,12
+18725,"Old Testament","Isaiah 54",493,17
+18742,"Old Testament","Isaiah 55",399,13
+18755,"Old Testament","Isaiah 56",361,12
+18767,"Old Testament","Isaiah 57",569,21
+18788,"Old Testament","Isaiah 58",521,14
+18802,"Old Testament","Isaiah 59",590,21
+18823,"Old Testament","Isaiah 60",665,22
+18845,"Old Testament","Isaiah 61",380,11
+18856,"Old Testament","Isaiah 62",362,12
+18868,"Old Testament","Isaiah 63",538,19
+18887,"Old Testament","Isaiah 64",308,12
+18899,"Old Testament","Isaiah 65",753,25
+18924,"Old Testament","Isaiah 66",811,24
+18948,"Old Testament","Jeremiah 1",528,19
+18967,"Old Testament","Jeremiah 2",1019,37
+19004,"Old Testament","Jeremiah 3",802,25
+19029,"Old Testament","Jeremiah 4",861,31
+19060,"Old Testament","Jeremiah 5",874,31
+19091,"Old Testament","Jeremiah 6",827,30
+19121,"Old Testament","Jeremiah 7",970,34
+19155,"Old Testament","Jeremiah 8",706,22
+19177,"Old Testament","Jeremiah 9",772,26
+19203,"Old Testament","Jeremiah 10",674,25
+19228,"Old Testament","Jeremiah 11",749,23
+19251,"Old Testament","Jeremiah 12",544,17
+19268,"Old Testament","Jeremiah 13",739,27
+19295,"Old Testament","Jeremiah 14",688,22
+19317,"Old Testament","Jeremiah 15",702,21
+19338,"Old Testament","Jeremiah 16",699,21
+19359,"Old Testament","Jeremiah 17",829,27
+19386,"Old Testament","Jeremiah 18",659,23
+19409,"Old Testament","Jeremiah 19",541,15
+19424,"Old Testament","Jeremiah 20",594,18
+19442,"Old Testament","Jeremiah 21",498,14
+19456,"Old Testament","Jeremiah 22",837,30
+19486,"Old Testament","Jeremiah 23",1186,40
+19526,"Old Testament","Jeremiah 24",361,10
+19536,"Old Testament","Jeremiah 25",1138,38
+19574,"Old Testament","Jeremiah 26",800,24
+19598,"Old Testament","Jeremiah 27",762,22
+19620,"Old Testament","Jeremiah 28",540,17
+19637,"Old Testament","Jeremiah 29",1005,32
+19669,"Old Testament","Jeremiah 30",717,24
+19693,"Old Testament","Jeremiah 31",1294,40
+19733,"Old Testament","Jeremiah 32",1432,44
+19777,"Old Testament","Jeremiah 33",842,26
+19803,"Old Testament","Jeremiah 34",824,22
+19825,"Old Testament","Jeremiah 35",657,19
+19844,"Old Testament","Jeremiah 36",1110,32
+19876,"Old Testament","Jeremiah 37",611,21
+19897,"Old Testament","Jeremiah 38",984,28
+19925,"Old Testament","Jeremiah 39",545,18
+19943,"Old Testament","Jeremiah 40",681,16
+19959,"Old Testament","Jeremiah 41",664,18
+19977,"Old Testament","Jeremiah 42",774,22
+19999,"Old Testament","Jeremiah 43",460,13
+20012,"Old Testament","Jeremiah 44",1228,30
+20042,"Old Testament","Jeremiah 45",152,5
+20047,"Old Testament","Jeremiah 46",821,28
+20075,"Old Testament","Jeremiah 47",215,7
+20082,"Old Testament","Jeremiah 48",1172,47
+20129,"Old Testament","Jeremiah 49",1180,39
+20168,"Old Testament","Jeremiah 50",1460,46
+20214,"Old Testament","Jeremiah 51",1853,64
+20278,"Old Testament","Jeremiah 52",1074,34
+20312,"Old Testament","Lamentations 1",758,22
+20334,"Old Testament","Lamentations 2",883,22
+20356,"Old Testament","Lamentations 3",876,66
+20422,"Old Testament","Lamentations 4",598,22
+20444,"Old Testament","Lamentations 5",296,22
+20466,"Old Testament","Ezekiel 1",870,28
+20494,"Old Testament","Ezekiel 2",273,10
+20504,"Old Testament","Ezekiel 3",809,27
+20531,"Old Testament","Ezekiel 4",519,17
+20548,"Old Testament","Ezekiel 5",628,17
+20565,"Old Testament","Ezekiel 6",470,14
+20579,"Old Testament","Ezekiel 7",768,27
+20606,"Old Testament","Ezekiel 8",655,18
+20624,"Old Testament","Ezekiel 9",400,11
+20635,"Old Testament","Ezekiel 10",659,22
+20657,"Old Testament","Ezekiel 11",721,25
+20682,"Old Testament","Ezekiel 12",799,28
+20710,"Old Testament","Ezekiel 13",738,23
+20733,"Old Testament","Ezekiel 14",745,23
+20756,"Old Testament","Ezekiel 15",205,8
+20764,"Old Testament","Ezekiel 16",1820,63
+20827,"Old Testament","Ezekiel 17",773,24
+20851,"Old Testament","Ezekiel 18",919,32
+20883,"Old Testament","Ezekiel 19",356,14
+20897,"Old Testament","Ezekiel 20",1601,49
+20946,"Old Testament","Ezekiel 21",945,32
+20978,"Old Testament","Ezekiel 22",840,31
+21009,"Old Testament","Ezekiel 23",1322,49
+21058,"Old Testament","Ezekiel 24",774,27
+21085,"Old Testament","Ezekiel 25",507,17
+21102,"Old Testament","Ezekiel 26",727,21
+21123,"Old Testament","Ezekiel 27",907,36
+21159,"Old Testament","Ezekiel 28",809,26
+21185,"Old Testament","Ezekiel 29",714,21
+21206,"Old Testament","Ezekiel 30",760,26
+21232,"Old Testament","Ezekiel 31",680,18
+21250,"Old Testament","Ezekiel 32",1077,32
+21282,"Old Testament","Ezekiel 33",1071,33
+21315,"Old Testament","Ezekiel 34",958,31
+21346,"Old Testament","Ezekiel 35",402,15
+21361,"Old Testament","Ezekiel 36",1180,38
+21399,"Old Testament","Ezekiel 37",870,28
+21427,"Old Testament","Ezekiel 38",776,23
+21450,"Old Testament","Ezekiel 39",928,29
+21479,"Old Testament","Ezekiel 40",1530,49
+21528,"Old Testament","Ezekiel 41",802,26
+21554,"Old Testament","Ezekiel 42",568,20
+21574,"Old Testament","Ezekiel 43",907,27
+21601,"Old Testament","Ezekiel 44",1031,31
+21632,"Old Testament","Ezekiel 45",882,25
+21657,"Old Testament","Ezekiel 46",879,24
+21681,"Old Testament","Ezekiel 47",780,23
+21704,"Old Testament","Ezekiel 48",1045,35
+21739,"Old Testament","Daniel 1",589,21
+21760,"Old Testament","Daniel 2",1500,49
+21809,"Old Testament","Daniel 3",992,30
+21839,"Old Testament","Daniel 4",1290,37
+21876,"Old Testament","Daniel 5",995,31
+21907,"Old Testament","Daniel 6",905,28
+21935,"Old Testament","Daniel 7",926,28
+21963,"Old Testament","Daniel 8",852,27
+21990,"Old Testament","Daniel 9",966,27
+22017,"Old Testament","Daniel 10",647,21
+22038,"Old Testament","Daniel 11",1529,45
+22083,"Old Testament","Daniel 12",411,13
+22096,"Old Testament","Hosea 1",355,11
+22107,"Old Testament","Hosea 2",678,23
+22130,"Old Testament","Hosea 3",156,5
+22135,"Old Testament","Hosea 4",465,19
+22154,"Old Testament","Hosea 5",368,15
+22169,"Old Testament","Hosea 6",254,11
+22180,"Old Testament","Hosea 7",398,16
+22196,"Old Testament","Hosea 8",330,14
+22210,"Old Testament","Hosea 9",468,17
+22227,"Old Testament","Hosea 10",425,15
+22242,"Old Testament","Hosea 11",308,12
+22254,"Old Testament","Hosea 12",311,14
+22268,"Old Testament","Hosea 13",426,16
+22284,"Old Testament","Hosea 14",232,9
+22293,"Old Testament","Joel 1",508,20
+22313,"Old Testament","Joel 2",958,32
+22345,"Old Testament","Joel 3",567,21
+22366,"Old Testament","Amos 1",455,15
+22381,"Old Testament","Amos 2",441,16
+22397,"Old Testament","Amos 3",397,15
+22412,"Old Testament","Amos 4",432,13
+22425,"Old Testament","Amos 5",658,27
+22452,"Old Testament","Amos 6",399,14
+22466,"Old Testament","Amos 7",471,17
+22483,"Old Testament","Amos 8",414,14
+22497,"Old Testament","Amos 9",549,15
+22512,"Old Testament","Obadiah 1",669,21
+22533,"Old Testament","Jonah 1",514,17
+22550,"Old Testament","Jonah 2",214,10
+22560,"Old Testament","Jonah 3",260,10
+22570,"Old Testament","Jonah 4",332,11
+22581,"Old Testament","Micah 1",452,16
+22597,"Old Testament","Micah 2",400,13
+22610,"Old Testament","Micah 3",354,12
+22622,"Old Testament","Micah 4",476,13
+22635,"Old Testament","Micah 5",447,15
+22650,"Old Testament","Micah 6",440,16
+22666,"Old Testament","Micah 7",583,20
+22686,"Old Testament","Nahum 1",394,15
+22701,"Old Testament","Nahum 2",371,13
+22714,"Old Testament","Nahum 3",519,19
+22733,"Old Testament","Habakkuk 1",423,17
+22750,"Old Testament","Habakkuk 2",563,20
+22770,"Old Testament","Habakkuk 3",489,19
+22789,"Old Testament","Zephaniah 1",555,18
+22807,"Old Testament","Zephaniah 2",463,15
+22822,"Old Testament","Zephaniah 3",598,20
+22842,"Old Testament","Haggai 1",451,15
+22857,"Old Testament","Haggai 2",679,23
+22880,"Old Testament","Zechariah 1",622,21
+22901,"Old Testament","Zechariah 2",317,13
+22914,"Old Testament","Zechariah 3",296,10
+22924,"Old Testament","Zechariah 4",365,14
+22938,"Old Testament","Zechariah 5",338,11
+22949,"Old Testament","Zechariah 6",424,15
+22964,"Old Testament","Zechariah 7",378,14
+22978,"Old Testament","Zechariah 8",703,23
+23001,"Old Testament","Zechariah 9",537,17
+23018,"Old Testament","Zechariah 10",408,12
+23030,"Old Testament","Zechariah 11",502,17
+23047,"Old Testament","Zechariah 12",462,14
+23061,"Old Testament","Zechariah 13",337,9
+23070,"Old Testament","Zechariah 14",754,21
+23091,"Old Testament","Malachi 1",487,14
+23105,"Old Testament","Malachi 2",546,17
+23122,"Old Testament","Malachi 3",565,18
+23140,"Old Testament","Malachi 4",183,6
+23146,"New Testament","Matthew 1",473,25
+23171,"New Testament","Matthew 2",619,23
+23194,"New Testament","Matthew 3",387,17
+23211,"New Testament","Matthew 4",557,25
+23236,"New Testament","Matthew 5",1081,48
+23284,"New Testament","Matthew 6",794,34
+23318,"New Testament","Matthew 7",626,29
+23347,"New Testament","Matthew 8",773,34
+23381,"New Testament","Matthew 9",837,38
+23419,"New Testament","Matthew 10",919,42
+23461,"New Testament","Matthew 11",668,30
+23491,"New Testament","Matthew 12",1168,50
+23541,"New Testament","Matthew 13",1367,58
+23599,"New Testament","Matthew 14",721,36
+23635,"New Testament","Matthew 15",785,39
+23674,"New Testament","Matthew 16",688,28
+23702,"New Testament","Matthew 17",620,27
+23729,"New Testament","Matthew 18",869,35
+23764,"New Testament","Matthew 19",719,30
+23794,"New Testament","Matthew 20",779,34
+23828,"New Testament","Matthew 21",1126,46
+23874,"New Testament","Matthew 22",828,46
+23920,"New Testament","Matthew 23",833,39
+23959,"New Testament","Matthew 24",1047,51
+24010,"New Testament","Matthew 25",995,46
+24056,"New Testament","Matthew 26",1625,75
+24131,"New Testament","Matthew 27",1359,66
+24197,"New Testament","Matthew 28",421,20
+24217,"New Testament","Mark 1",930,45
+24262,"New Testament","Mark 2",724,28
+24290,"New Testament","Mark 3",663,35
+24325,"New Testament","Mark 4",923,41
+24366,"New Testament","Mark 5",952,43
+24409,"New Testament","Mark 6",1323,56
+24465,"New Testament","Mark 7",806,37
+24502,"New Testament","Mark 8",842,38
+24540,"New Testament","Mark 9",1164,50
+24590,"New Testament","Mark 10",1218,52
+24642,"New Testament","Mark 11",778,33
+24675,"New Testament","Mark 12",1058,44
+24719,"New Testament","Mark 13",828,37
+24756,"New Testament","Mark 14",1595,72
+24828,"New Testament","Mark 15",913,47
+24875,"New Testament","Mark 16",449,20
+24895,"New Testament","Luke 1",1583,80
+24975,"New Testament","Luke 2",1094,52
+25027,"New Testament","Luke 3",1017,38
+25065,"New Testament","Luke 4",1021,44
+25109,"New Testament","Luke 5",949,39
+25148,"New Testament","Luke 6",1229,49
+25197,"New Testament","Luke 7",1209,50
+25247,"New Testament","Luke 8",1431,56
+25303,"New Testament","Luke 9",1457,62
+25365,"New Testament","Luke 10",992,42
+25407,"New Testament","Luke 11",1331,54
+25461,"New Testament","Luke 12",1407,59
+25520,"New Testament","Luke 13",864,35
+25555,"New Testament","Luke 14",812,35
+25590,"New Testament","Luke 15",725,32
+25622,"New Testament","Luke 16",752,31
+25653,"New Testament","Luke 17",809,37
+25690,"New Testament","Luke 18",868,43
+25733,"New Testament","Luke 19",1047,48
+25781,"New Testament","Luke 20",954,47
+25828,"New Testament","Luke 21",820,38
+25866,"New Testament","Luke 22",1396,71
+25937,"New Testament","Luke 23",1117,56
+25993,"New Testament","Luke 24",1054,53
+26046,"New Testament","John 1",1004,51
+26097,"New Testament","John 2",510,25
+26122,"New Testament","John 3",763,36
+26158,"New Testament","John 4",1094,54
+26212,"New Testament","John 5",1001,47
+26259,"New Testament","John 6",1506,71
+26330,"New Testament","John 7",1002,53
+26383,"New Testament","John 8",1307,59
+26442,"New Testament","John 9",876,41
+26483,"New Testament","John 10",820,42
+26525,"New Testament","John 11",1157,57
+26582,"New Testament","John 12",1060,50
+26632,"New Testament","John 13",826,38
+26670,"New Testament","John 14",731,31
+26701,"New Testament","John 15",613,27
+26728,"New Testament","John 16",789,33
+26761,"New Testament","John 17",636,26
+26787,"New Testament","John 18",947,40
+26827,"New Testament","John 19",1010,42
+26869,"New Testament","John 20",749,31
+26900,"New Testament","John 21",693,25
+26925,"New Testament","Acts 1",661,26
+26951,"New Testament","Acts 2",1021,47
+26998,"New Testament","Acts 3",634,26
+27024,"New Testament","Acts 4",865,37
+27061,"New Testament","Acts 5",1026,42
+27103,"New Testament","Acts 6",355,15
+27118,"New Testament","Acts 7",1430,60
+27178,"New Testament","Acts 8",883,40
+27218,"New Testament","Acts 9",1046,43
+27261,"New Testament","Acts 10",1108,48
+27309,"New Testament","Acts 11",667,30
+27339,"New Testament","Acts 12",662,25
+27364,"New Testament","Acts 13",1272,52
+27416,"New Testament","Acts 14",627,28
+27444,"New Testament","Acts 15",925,41
+27485,"New Testament","Acts 16",943,40
+27525,"New Testament","Acts 17",855,34
+27559,"New Testament","Acts 18",664,28
+27587,"New Testament","Acts 19",975,41
+27628,"New Testament","Acts 20",882,38
+27666,"New Testament","Acts 21",1067,40
+27706,"New Testament","Acts 22",773,30
+27736,"New Testament","Acts 23",921,35
+27771,"New Testament","Acts 24",640,27
+27798,"New Testament","Acts 25",711,27
+27825,"New Testament","Acts 26",781,32
+27857,"New Testament","Acts 27",1033,44
+27901,"New Testament","Acts 28",818,31
+27932,"New Testament","Romans 1",714,32
+27964,"New Testament","Romans 2",604,29
+27993,"New Testament","Romans 3",562,31
+28024,"New Testament","Romans 4",546,25
+28049,"New Testament","Romans 5",480,21
+28070,"New Testament","Romans 6",484,23
+28093,"New Testament","Romans 7",605,25
+28118,"New Testament","Romans 8",903,39
+28157,"New Testament","Romans 9",719,33
+28190,"New Testament","Romans 10",461,21
+28211,"New Testament","Romans 11",819,36
+28247,"New Testament","Romans 12",397,21
+28268,"New Testament","Romans 13",361,14
+28282,"New Testament","Romans 14",525,23
+28305,"New Testament","Romans 15",742,33
+28338,"New Testament","Romans 16",501,27
+28365,"New Testament","1 Corinthians 1",649,31
+28396,"New Testament","1 Corinthians 2",373,16
+28412,"New Testament","1 Corinthians 3",459,23
+28435,"New Testament","1 Corinthians 4",509,21
+28456,"New Testament","1 Corinthians 5",321,13
+28469,"New Testament","1 Corinthians 6",465,20
+28489,"New Testament","1 Corinthians 7",959,40
+28529,"New Testament","1 Corinthians 8",309,13
+28542,"New Testament","1 Corinthians 9",671,27
+28569,"New Testament","1 Corinthians 10",667,33
+28602,"New Testament","1 Corinthians 11",718,34
+28636,"New Testament","1 Corinthians 12",593,31
+28667,"New Testament","1 Corinthians 13",270,13
+28680,"New Testament","1 Corinthians 14",887,40
+28720,"New Testament","1 Corinthians 15",1166,58
+28778,"New Testament","1 Corinthians 16",446,24
+28802,"New Testament","2 Corinthians 1",591,24
+28826,"New Testament","2 Corinthians 2",401,17
+28843,"New Testament","2 Corinthians 3",389,18
+28861,"New Testament","2 Corinthians 4",406,18
+28879,"New Testament","2 Corinthians 5",487,21
+28900,"New Testament","2 Corinthians 6",357,18
+28918,"New Testament","2 Corinthians 7",452,16
+28934,"New Testament","2 Corinthians 8",568,24
+28958,"New Testament","2 Corinthians 9",355,15
+28973,"New Testament","2 Corinthians 10",437,18
+28991,"New Testament","2 Corinthians 11",718,33
+29024,"New Testament","2 Corinthians 12",589,21
+29045,"New Testament","2 Corinthians 13",315,14
+29059,"New Testament","Galatians 1",453,24
+29083,"New Testament","Galatians 2",573,21
+29104,"New Testament","Galatians 3",648,29
+29133,"New Testament","Galatians 4",610,31
+29164,"New Testament","Galatians 5",447,26
+29190,"New Testament","Galatians 6",353,18
+29208,"New Testament","Ephesians 1",508,23
+29231,"New Testament","Ephesians 2",453,22
+29253,"New Testament","Ephesians 3",410,21
+29274,"New Testament","Ephesians 4",617,32
+29306,"New Testament","Ephesians 5",564,33
+29339,"New Testament","Ephesians 6",470,24
+29363,"New Testament","Philippians 1",632,30
+29393,"New Testament","Philippians 2",601,30
+29423,"New Testament","Philippians 3",483,21
+29444,"New Testament","Philippians 4",467,23
+29467,"New Testament","Colossians 1",656,29
+29496,"New Testament","Colossians 2",503,23
+29519,"New Testament","Colossians 3",457,25
+29544,"New Testament","Colossians 4",363,18
+29562,"New Testament","1 Thessalonians 1",253,10
+29572,"New Testament","1 Thessalonians 2",479,20
+29592,"New Testament","1 Thessalonians 3",295,13
+29605,"New Testament","1 Thessalonians 4",396,18
+29623,"New Testament","1 Thessalonians 5",414,28
+29651,"New Testament","2 Thessalonians 1",291,12
+29663,"New Testament","2 Thessalonians 2",381,17
+29680,"New Testament","2 Thessalonians 3",350,18
+29698,"New Testament","1 Timothy 1",432,20
+29718,"New Testament","1 Timothy 2",247,15
+29733,"New Testament","1 Timothy 3",324,16
+29749,"New Testament","1 Timothy 4",310,16
+29765,"New Testament","1 Timothy 5",470,25
+29790,"New Testament","1 Timothy 6",461,21
+29811,"New Testament","2 Timothy 1",438,18
+29829,"New Testament","2 Timothy 2",506,26
+29855,"New Testament","2 Timothy 3",297,17
+29872,"New Testament","2 Timothy 4",425,22
+29894,"New Testament","Titus 1",337,16
+29910,"New Testament","Titus 2",265,15
+29925,"New Testament","Titus 3",294,15
+29940,"New Testament","Philemon 1",430,25
+29965,"New Testament","Hebrews 1",338,14
+29979,"New Testament","Hebrews 2",472,18
+29997,"New Testament","Hebrews 3",362,19
+30016,"New Testament","Hebrews 4",404,16
+30032,"New Testament","Hebrews 5",321,14
+30046,"New Testament","Hebrews 6",425,20
+30066,"New Testament","Hebrews 7",607,28
+30094,"New Testament","Hebrews 8",387,13
+30107,"New Testament","Hebrews 9",677,28
+30135,"New Testament","Hebrews 10",784,39
+30174,"New Testament","Hebrews 11",921,40
+30214,"New Testament","Hebrews 12",696,29
+30243,"New Testament","Hebrews 13",501,25
+30268,"New Testament","James 1",544,27
+30295,"New Testament","James 2",528,26
+30321,"New Testament","James 3",378,18
+30339,"New Testament","James 4",369,17
+30356,"New Testament","James 5",485,20
+30376,"New Testament","1 Peter 1",597,25
+30401,"New Testament","1 Peter 2",549,25
+30426,"New Testament","1 Peter 3",551,22
+30448,"New Testament","1 Peter 4",479,19
+30467,"New Testament","1 Peter 5",300,14
+30481,"New Testament","2 Peter 1",488,21
+30502,"New Testament","2 Peter 2",581,22
+30524,"New Testament","2 Peter 3",484,18
+30542,"New Testament","1 John 1",247,10
+30552,"New Testament","1 John 2",736,29
+30581,"New Testament","1 John 3",534,24
+30605,"New Testament","1 John 4",480,21
+30626,"New Testament","1 John 5",520,21
+30647,"New Testament","2 John 1",298,13
+30660,"New Testament","3 John 1",294,14
+30674,"New Testament","Jude 1",608,25
+30699,"New Testament","Revelation 1",592,20
+30719,"New Testament","Revelation 2",802,29
+30748,"New Testament","Revelation 3",658,22
+30770,"New Testament","Revelation 4",348,11
+30781,"New Testament","Revelation 5",435,14
+30795,"New Testament","Revelation 6",540,17
+30812,"New Testament","Revelation 7",491,17
+30829,"New Testament","Revelation 8",397,13
+30842,"New Testament","Revelation 9",592,21
+30863,"New Testament","Revelation 10",353,11
+30874,"New Testament","Revelation 11",580,19
+30893,"New Testament","Revelation 12",497,17
+30910,"New Testament","Revelation 13",538,18
+30928,"New Testament","Revelation 14",651,20
+30948,"New Testament","Revelation 15",252,8
+30956,"New Testament","Revelation 16",567,21
+30977,"New Testament","Revelation 17",522,18
+30995,"New Testament","Revelation 18",747,24
+31019,"New Testament","Revelation 19",634,21
+31040,"New Testament","Revelation 20",477,15
+31055,"New Testament","Revelation 21",749,27
+31082,"New Testament","Revelation 22",573,21
+31103,"Book of Mormon","1 Nephi 1",906,20
+31123,"Book of Mormon","1 Nephi 2",879,24
+31147,"Book of Mormon","1 Nephi 3",1065,31
+31178,"Book of Mormon","1 Nephi 4",1261,38
+31216,"Book of Mormon","1 Nephi 5",761,22
+31238,"Book of Mormon","1 Nephi 6",202,6
+31244,"Book of Mormon","1 Nephi 7",992,22
+31266,"Book of Mormon","1 Nephi 8",1221,38
+31304,"Book of Mormon","1 Nephi 9",259,6
+31310,"Book of Mormon","1 Nephi 10",916,22
+31332,"Book of Mormon","1 Nephi 11",1314,36
+31368,"Book of Mormon","1 Nephi 12",860,23
+31391,"Book of Mormon","1 Nephi 13",1892,42
+31433,"Book of Mormon","1 Nephi 14",1282,30
+31463,"Book of Mormon","1 Nephi 15",1484,36
+31499,"Book of Mormon","1 Nephi 16",1632,39
+31538,"Book of Mormon","1 Nephi 17",2523,55
+31593,"Book of Mormon","1 Nephi 18",1216,25
+31618,"Book of Mormon","1 Nephi 19",1290,24
+31642,"Book of Mormon","1 Nephi 20",694,22
+31664,"Book of Mormon","1 Nephi 21",952,26
+31690,"Book of Mormon","1 Nephi 22",1506,31
+31721,"Book of Mormon","2 Nephi 1",1540,32
+31753,"Book of Mormon","2 Nephi 2",1456,30
+31783,"Book of Mormon","2 Nephi 3",1166,25
+31808,"Book of Mormon","2 Nephi 4",1298,35
+31843,"Book of Mormon","2 Nephi 5",1168,34
+31877,"Book of Mormon","2 Nephi 6",895,18
+31895,"Book of Mormon","2 Nephi 7",403,11
+31906,"Book of Mormon","2 Nephi 8",808,25
+31931,"Book of Mormon","2 Nephi 9",2384,54
+31985,"Book of Mormon","2 Nephi 10",962,25
+32010,"Book of Mormon","2 Nephi 11",338,8
+32018,"Book of Mormon","2 Nephi 12",643,22
+32040,"Book of Mormon","2 Nephi 13",584,26
+32066,"Book of Mormon","2 Nephi 14",202,6
+32072,"Book of Mormon","2 Nephi 15",853,30
+32102,"Book of Mormon","2 Nephi 16",367,13
+32115,"Book of Mormon","2 Nephi 17",682,25
+32140,"Book of Mormon","2 Nephi 18",561,22
+32162,"Book of Mormon","2 Nephi 19",586,21
+32183,"Book of Mormon","2 Nephi 20",927,34
+32217,"Book of Mormon","2 Nephi 21",519,16
+32233,"Book of Mormon","2 Nephi 22",134,6
+32239,"Book of Mormon","2 Nephi 23",586,22
+32261,"Book of Mormon","2 Nephi 24",887,32
+32293,"Book of Mormon","2 Nephi 25",1698,30
+32323,"Book of Mormon","2 Nephi 26",1481,33
+32356,"Book of Mormon","2 Nephi 27",1459,35
+32391,"Book of Mormon","2 Nephi 28",1236,32
+32423,"Book of Mormon","2 Nephi 29",802,14
+32437,"Book of Mormon","2 Nephi 30",708,18
+32455,"Book of Mormon","2 Nephi 31",987,21
+32476,"Book of Mormon","2 Nephi 32",426,9
+32485,"Book of Mormon","2 Nephi 33",644,15
+32500,"Book of Mormon","Jacob 1",718,19
+32519,"Book of Mormon","Jacob 2",1363,35
+32554,"Book of Mormon","Jacob 3",618,14
+32568,"Book of Mormon","Jacob 4",928,18
+32586,"Book of Mormon","Jacob 5",3749,77
+32663,"Book of Mormon","Jacob 6",509,13
+32676,"Book of Mormon","Jacob 7",1241,27
+32703,"Book of Mormon","Enos 1",1156,27
+32730,"Book of Mormon","Jarom 1",731,15
+32745,"Book of Mormon","Omni 1",1398,30
+32775,"Book of Mormon","Words of Mormon 1",856,18
+32793,"Book of Mormon","Mosiah 1",966,18
+32811,"Book of Mormon","Mosiah 2",2107,41
+32852,"Book of Mormon","Mosiah 3",1117,27
+32879,"Book of Mormon","Mosiah 4",1601,30
+32909,"Book of Mormon","Mosiah 5",739,15
+32924,"Book of Mormon","Mosiah 6",307,7
+32931,"Book of Mormon","Mosiah 7",1548,33
+32964,"Book of Mormon","Mosiah 8",937,21
+32985,"Book of Mormon","Mosiah 9",858,19
+33004,"Book of Mormon","Mosiah 10",953,22
+33026,"Book of Mormon","Mosiah 11",1268,29
+33055,"Book of Mormon","Mosiah 12",1289,37
+33092,"Book of Mormon","Mosiah 13",1065,35
+33127,"Book of Mormon","Mosiah 14",391,12
+33139,"Book of Mormon","Mosiah 15",1055,31
+33170,"Book of Mormon","Mosiah 16",560,15
+33185,"Book of Mormon","Mosiah 17",650,20
+33205,"Book of Mormon","Mosiah 18",1380,35
+33240,"Book of Mormon","Mosiah 19",978,29
+33269,"Book of Mormon","Mosiah 20",961,26
+33295,"Book of Mormon","Mosiah 21",1328,36
+33331,"Book of Mormon","Mosiah 22",619,16
+33347,"Book of Mormon","Mosiah 23",1185,39
+33386,"Book of Mormon","Mosiah 24",949,25
+33411,"Book of Mormon","Mosiah 25",837,24
+33435,"Book of Mormon","Mosiah 26",1199,39
+33474,"Book of Mormon","Mosiah 27",1598,37
+33511,"Book of Mormon","Mosiah 28",812,20
+33531,"Book of Mormon","Mosiah 29",1874,47
+33578,"Book of Mormon","Alma 1",1493,33
+33611,"Book of Mormon","Alma 2",1434,38
+33649,"Book of Mormon","Alma 3",1014,27
+33676,"Book of Mormon","Alma 4",1028,20
+33696,"Book of Mormon","Alma 5",2782,62
+33758,"Book of Mormon","Alma 6",388,8
+33766,"Book of Mormon","Alma 7",1439,27
+33793,"Book of Mormon","Alma 8",1229,32
+33825,"Book of Mormon","Alma 9",1505,34
+33859,"Book of Mormon","Alma 10",1440,32
+33891,"Book of Mormon","Alma 11",1461,46
+33937,"Book of Mormon","Alma 12",1857,37
+33974,"Book of Mormon","Alma 13",1343,31
+34005,"Book of Mormon","Alma 14",1525,29
+34034,"Book of Mormon","Alma 15",710,19
+34053,"Book of Mormon","Alma 16",1007,21
+34074,"Book of Mormon","Alma 17",1845,39
+34113,"Book of Mormon","Alma 18",1621,43
+34156,"Book of Mormon","Alma 19",1698,36
+34192,"Book of Mormon","Alma 20",1278,30
+34222,"Book of Mormon","Alma 21",954,23
+34245,"Book of Mormon","Alma 22",1864,35
+34280,"Book of Mormon","Alma 23",761,18
+34298,"Book of Mormon","Alma 24",1497,30
+34328,"Book of Mormon","Alma 25",748,17
+34345,"Book of Mormon","Alma 26",1662,37
+34382,"Book of Mormon","Alma 27",1252,30
+34412,"Book of Mormon","Alma 28",573,14
+34426,"Book of Mormon","Alma 29",708,17
+34443,"Book of Mormon","Alma 30",2656,60
+34503,"Book of Mormon","Alma 31",1473,38
+34541,"Book of Mormon","Alma 32",1830,43
+34584,"Book of Mormon","Alma 33",855,23
+34607,"Book of Mormon","Alma 34",1574,41
+34648,"Book of Mormon","Alma 35",699,16
+34664,"Book of Mormon","Alma 36",1226,30
+34694,"Book of Mormon","Alma 37",2024,47
+34741,"Book of Mormon","Alma 38",648,15
+34756,"Book of Mormon","Alma 39",793,19
+34775,"Book of Mormon","Alma 40",1146,26
+34801,"Book of Mormon","Alma 41",698,15
+34816,"Book of Mormon","Alma 42",1222,31
+34847,"Book of Mormon","Alma 43",2209,54
+34901,"Book of Mormon","Alma 44",1241,24
+34925,"Book of Mormon","Alma 45",910,24
+34949,"Book of Mormon","Alma 46",1800,41
+34990,"Book of Mormon","Alma 47",1575,36
+35026,"Book of Mormon","Alma 48",1072,25
+35051,"Book of Mormon","Alma 49",1344,30
+35081,"Book of Mormon","Alma 50",1731,40
+35121,"Book of Mormon","Alma 51",1674,37
+35158,"Book of Mormon","Alma 52",1755,40
+35198,"Book of Mormon","Alma 53",1083,23
+35221,"Book of Mormon","Alma 54",988,24
+35245,"Book of Mormon","Alma 55",1217,35
+35280,"Book of Mormon","Alma 56",2175,57
+35337,"Book of Mormon","Alma 57",1515,36
+35373,"Book of Mormon","Alma 58",1746,41
+35414,"Book of Mormon","Alma 59",489,13
+35427,"Book of Mormon","Alma 60",1772,36
+35463,"Book of Mormon","Alma 61",852,21
+35484,"Book of Mormon","Alma 62",2214,52
+35536,"Book of Mormon","Alma 63",622,17
+35553,"Book of Mormon","Helaman 1",1411,34
+35587,"Book of Mormon","Helaman 2",591,14
+35601,"Book of Mormon","Helaman 3",1524,37
+35638,"Book of Mormon","Helaman 4",1073,26
+35664,"Book of Mormon","Helaman 5",2081,52
+35716,"Book of Mormon","Helaman 6",1801,41
+35757,"Book of Mormon","Helaman 7",1140,29
+35786,"Book of Mormon","Helaman 8",1208,28
+35814,"Book of Mormon","Helaman 9",1474,41
+35855,"Book of Mormon","Helaman 10",718,19
+35874,"Book of Mormon","Helaman 11",1561,38
+35912,"Book of Mormon","Helaman 12",855,26
+35938,"Book of Mormon","Helaman 13",1853,39
+35977,"Book of Mormon","Helaman 14",1240,31
+36008,"Book of Mormon","Helaman 15",824,17
+36025,"Book of Mormon","Helaman 16",1025,25
+36050,"Book of Mormon","3 Nephi 1",1339,30
+36080,"Book of Mormon","3 Nephi 2",769,19
+36099,"Book of Mormon","3 Nephi 3",1352,26
+36125,"Book of Mormon","3 Nephi 4",1514,33
+36158,"Book of Mormon","3 Nephi 5",931,26
+36184,"Book of Mormon","3 Nephi 6",1197,30
+36214,"Book of Mormon","3 Nephi 7",1127,26
+36240,"Book of Mormon","3 Nephi 8",868,25
+36265,"Book of Mormon","3 Nephi 9",965,22
+36287,"Book of Mormon","3 Nephi 10",807,19
+36306,"Book of Mormon","3 Nephi 11",1432,41
+36347,"Book of Mormon","3 Nephi 12",1295,48
+36395,"Book of Mormon","3 Nephi 13",834,34
+36429,"Book of Mormon","3 Nephi 14",624,27
+36456,"Book of Mormon","3 Nephi 15",730,24
+36480,"Book of Mormon","3 Nephi 16",911,20
+36500,"Book of Mormon","3 Nephi 17",879,25
+36525,"Book of Mormon","3 Nephi 18",1343,39
+36564,"Book of Mormon","3 Nephi 19",1228,36
+36600,"Book of Mormon","3 Nephi 20",1534,46
+36646,"Book of Mormon","3 Nephi 21",1152,29
+36675,"Book of Mormon","3 Nephi 22",506,17
+36692,"Book of Mormon","3 Nephi 23",415,14
+36706,"Book of Mormon","3 Nephi 24",617,18
+36724,"Book of Mormon","3 Nephi 25",183,6
+36730,"Book of Mormon","3 Nephi 26",791,21
+36751,"Book of Mormon","3 Nephi 27",1286,33
+36784,"Book of Mormon","3 Nephi 28",1452,40
+36824,"Book of Mormon","3 Nephi 29",394,9
+36833,"Book of Mormon","3 Nephi 30",130,2
+36835,"Book of Mormon","4 Nephi 1",1946,49
+36884,"Book of Mormon","Mormon 1",705,19
+36903,"Book of Mormon","Mormon 2",1261,29
+36932,"Book of Mormon","Mormon 3",936,22
+36954,"Book of Mormon","Mormon 4",822,23
+36977,"Book of Mormon","Mormon 5",1064,24
+37001,"Book of Mormon","Mormon 6",913,22
+37023,"Book of Mormon","Mormon 7",453,10
+37033,"Book of Mormon","Mormon 8",1715,41
+37074,"Book of Mormon","Mormon 9",1558,37
+37111,"Book of Mormon","Ether 1",901,43
+37154,"Book of Mormon","Ether 2",1369,25
+37179,"Book of Mormon","Ether 3",1252,28
+37207,"Book of Mormon","Ether 4",890,19
+37226,"Book of Mormon","Ether 5",225,6
+37232,"Book of Mormon","Ether 6",1047,30
+37262,"Book of Mormon","Ether 7",912,27
+37289,"Book of Mormon","Ether 8",1230,26
+37315,"Book of Mormon","Ether 9",1419,35
+37350,"Book of Mormon","Ether 10",1411,34
+37384,"Book of Mormon","Ether 11",762,23
+37407,"Book of Mormon","Ether 12",1533,41
+37448,"Book of Mormon","Ether 13",1219,31
+37479,"Book of Mormon","Ether 14",1131,31
+37510,"Book of Mormon","Ether 15",1312,34
+37544,"Book of Mormon","Moroni 1",147,4
+37548,"Book of Mormon","Moroni 2",119,3
+37551,"Book of Mormon","Moroni 3",120,4
+37555,"Book of Mormon","Moroni 4",153,3
+37558,"Book of Mormon","Moroni 5",90,2
+37560,"Book of Mormon","Moroni 6",335,9
+37569,"Book of Mormon","Moroni 7",1929,48
+37617,"Book of Mormon","Moroni 8",1062,30
+37647,"Book of Mormon","Moroni 9",1011,26
+37673,"Book of Mormon","Moroni 10",1148,34
+37707,"Doctrine and Covenants","Doctrine and Covenants 1",1070,39
+37746,"Doctrine and Covenants","Doctrine and Covenants 2",69,3
+37749,"Doctrine and Covenants","Doctrine and Covenants 3",608,20
+37769,"Doctrine and Covenants","Doctrine and Covenants 4",145,7
+37776,"Doctrine and Covenants","Doctrine and Covenants 5",1136,35
+37811,"Doctrine and Covenants","Doctrine and Covenants 6",1102,37
+37848,"Doctrine and Covenants","Doctrine and Covenants 7",252,8
+37856,"Doctrine and Covenants","Doctrine and Covenants 8",389,12
+37868,"Doctrine and Covenants","Doctrine and Covenants 9",396,14
+37882,"Doctrine and Covenants","Doctrine and Covenants 10",1928,70
+37952,"Doctrine and Covenants","Doctrine and Covenants 11",787,30
+37982,"Doctrine and Covenants","Doctrine and Covenants 12",232,9
+37991,"Doctrine and Covenants","Doctrine and Covenants 13",66,1
+37992,"Doctrine and Covenants","Doctrine and Covenants 14",302,11
+38003,"Doctrine and Covenants","Doctrine and Covenants 15",139,6
+38009,"Doctrine and Covenants","Doctrine and Covenants 16",140,6
+38015,"Doctrine and Covenants","Doctrine and Covenants 17",311,9
+38024,"Doctrine and Covenants","Doctrine and Covenants 18",1125,47
+38071,"Doctrine and Covenants","Doctrine and Covenants 19",988,41
+38112,"Doctrine and Covenants","Doctrine and Covenants 20",2388,84
+38196,"Doctrine and Covenants","Doctrine and Covenants 21",400,12
+38208,"Doctrine and Covenants","Doctrine and Covenants 22",117,4
+38212,"Doctrine and Covenants","Doctrine and Covenants 23",258,7
+38219,"Doctrine and Covenants","Doctrine and Covenants 24",609,19
+38238,"Doctrine and Covenants","Doctrine and Covenants 25",445,16
+38254,"Doctrine and Covenants","Doctrine and Covenants 26",91,2
+38256,"Doctrine and Covenants","Doctrine and Covenants 27",648,18
+38274,"Doctrine and Covenants","Doctrine and Covenants 28",470,16
+38290,"Doctrine and Covenants","Doctrine and Covenants 29",1689,50
+38340,"Doctrine and Covenants","Doctrine and Covenants 30",370,11
+38351,"Doctrine and Covenants","Doctrine and Covenants 31",340,13
+38364,"Doctrine and Covenants","Doctrine and Covenants 32",145,5
+38369,"Doctrine and Covenants","Doctrine and Covenants 33",505,18
+38387,"Doctrine and Covenants","Doctrine and Covenants 34",269,12
+38399,"Doctrine and Covenants","Doctrine and Covenants 35",840,27
+38426,"Doctrine and Covenants","Doctrine and Covenants 36",230,8
+38434,"Doctrine and Covenants","Doctrine and Covenants 37",131,4
+38438,"Doctrine and Covenants","Doctrine and Covenants 38",1290,42
+38480,"Doctrine and Covenants","Doctrine and Covenants 39",663,24
+38504,"Doctrine and Covenants","Doctrine and Covenants 40",77,3
+38507,"Doctrine and Covenants","Doctrine and Covenants 41",376,12
+38519,"Doctrine and Covenants","Doctrine and Covenants 42",2623,93
+38612,"Doctrine and Covenants","Doctrine and Covenants 43",1106,35
+38647,"Doctrine and Covenants","Doctrine and Covenants 44",199,6
+38653,"Doctrine and Covenants","Doctrine and Covenants 45",2171,75
+38728,"Doctrine and Covenants","Doctrine and Covenants 46",842,33
+38761,"Doctrine and Covenants","Doctrine and Covenants 47",111,4
+38765,"Doctrine and Covenants","Doctrine and Covenants 48",233,6
+38771,"Doctrine and Covenants","Doctrine and Covenants 49",826,28
+38799,"Doctrine and Covenants","Doctrine and Covenants 50",1155,46
+38845,"Doctrine and Covenants","Doctrine and Covenants 51",574,20
+38865,"Doctrine and Covenants","Doctrine and Covenants 52",1047,44
+38909,"Doctrine and Covenants","Doctrine and Covenants 53",211,7
+38916,"Doctrine and Covenants","Doctrine and Covenants 54",255,10
+38926,"Doctrine and Covenants","Doctrine and Covenants 55",238,6
+38932,"Doctrine and Covenants","Doctrine and Covenants 56",665,20
+38952,"Doctrine and Covenants","Doctrine and Covenants 57",557,16
+38968,"Doctrine and Covenants","Doctrine and Covenants 58",1773,65
+39033,"Doctrine and Covenants","Doctrine and Covenants 59",647,24
+39057,"Doctrine and Covenants","Doctrine and Covenants 60",524,17
+39074,"Doctrine and Covenants","Doctrine and Covenants 61",1083,39
+39113,"Doctrine and Covenants","Doctrine and Covenants 62",277,9
+39122,"Doctrine and Covenants","Doctrine and Covenants 63",1804,66
+39188,"Doctrine and Covenants","Doctrine and Covenants 64",1183,43
+39231,"Doctrine and Covenants","Doctrine and Covenants 65",238,6
+39237,"Doctrine and Covenants","Doctrine and Covenants 66",420,13
+39250,"Doctrine and Covenants","Doctrine and Covenants 67",429,14
+39264,"Doctrine and Covenants","Doctrine and Covenants 68",1027,35
+39299,"Doctrine and Covenants","Doctrine and Covenants 69",221,8
+39307,"Doctrine and Covenants","Doctrine and Covenants 70",482,18
+39325,"Doctrine and Covenants","Doctrine and Covenants 71",258,11
+39336,"Doctrine and Covenants","Doctrine and Covenants 72",773,26
+39362,"Doctrine and Covenants","Doctrine and Covenants 73",141,6
+39368,"Doctrine and Covenants","Doctrine and Covenants 74",225,7
+39375,"Doctrine and Covenants","Doctrine and Covenants 75",897,36
+39411,"Doctrine and Covenants","Doctrine and Covenants 76",2875,119
+39530,"Doctrine and Covenants","Doctrine and Covenants 77",1021,15
+39545,"Doctrine and Covenants","Doctrine and Covenants 78",658,22
+39567,"Doctrine and Covenants","Doctrine and Covenants 79",106,4
+39571,"Doctrine and Covenants","Doctrine and Covenants 80",112,5
+39576,"Doctrine and Covenants","Doctrine and Covenants 81",233,7
+39583,"Doctrine and Covenants","Doctrine and Covenants 82",717,24
+39607,"Doctrine and Covenants","Doctrine and Covenants 83",153,6
+39613,"Doctrine and Covenants","Doctrine and Covenants 84",3115,120
+39733,"Doctrine and Covenants","Doctrine and Covenants 85",479,12
+39745,"Doctrine and Covenants","Doctrine and Covenants 86",334,11
+39756,"Doctrine and Covenants","Doctrine and Covenants 87",293,8
+39764,"Doctrine and Covenants","Doctrine and Covenants 88",4421,141
+39905,"Doctrine and Covenants","Doctrine and Covenants 89",562,21
+39926,"Doctrine and Covenants","Doctrine and Covenants 90",1007,37
+39963,"Doctrine and Covenants","Doctrine and Covenants 91",102,6
+39969,"Doctrine and Covenants","Doctrine and Covenants 92",82,2
+39971,"Doctrine and Covenants","Doctrine and Covenants 93",1336,53
+40024,"Doctrine and Covenants","Doctrine and Covenants 94",474,17
+40041,"Doctrine and Covenants","Doctrine and Covenants 95",531,17
+40058,"Doctrine and Covenants","Doctrine and Covenants 96",302,9
+40067,"Doctrine and Covenants","Doctrine and Covenants 97",851,28
+40095,"Doctrine and Covenants","Doctrine and Covenants 98",1386,48
+40143,"Doctrine and Covenants","Doctrine and Covenants 99",220,8
+40151,"Doctrine and Covenants","Doctrine and Covenants 100",443,17
+40168,"Doctrine and Covenants","Doctrine and Covenants 101",2710,101
+40269,"Doctrine and Covenants","Doctrine and Covenants 102",1268,34
+40303,"Doctrine and Covenants","Doctrine and Covenants 103",1156,40
+40343,"Doctrine and Covenants","Doctrine and Covenants 104",2551,86
+40429,"Doctrine and Covenants","Doctrine and Covenants 105",1240,41
+40470,"Doctrine and Covenants","Doctrine and Covenants 106",252,8
+40478,"Doctrine and Covenants","Doctrine and Covenants 107",2925,100
+40578,"Doctrine and Covenants","Doctrine and Covenants 108",199,8
+40586,"Doctrine and Covenants","Doctrine and Covenants 109",2570,80
+40666,"Doctrine and Covenants","Doctrine and Covenants 110",475,16
+40682,"Doctrine and Covenants","Doctrine and Covenants 111",255,11
+40693,"Doctrine and Covenants","Doctrine and Covenants 112",1073,34
+40727,"Doctrine and Covenants","Doctrine and Covenants 113",333,10
+40737,"Doctrine and Covenants","Doctrine and Covenants 114",95,2
+40739,"Doctrine and Covenants","Doctrine and Covenants 115",520,19
+40758,"Doctrine and Covenants","Doctrine and Covenants 116",37,1
+40759,"Doctrine and Covenants","Doctrine and Covenants 117",528,16
+40775,"Doctrine and Covenants","Doctrine and Covenants 118",196,6
+40781,"Doctrine and Covenants","Doctrine and Covenants 119",217,7
+40788,"Doctrine and Covenants","Doctrine and Covenants 120",52,1
+40789,"Doctrine and Covenants","Doctrine and Covenants 121",1342,46
+40835,"Doctrine and Covenants","Doctrine and Covenants 122",432,9
+40844,"Doctrine and Covenants","Doctrine and Covenants 123",646,17
+40861,"Doctrine and Covenants","Doctrine and Covenants 124",5445,145
+41006,"Doctrine and Covenants","Doctrine and Covenants 125",176,4
+41010,"Doctrine and Covenants","Doctrine and Covenants 126",74,3
+41013,"Doctrine and Covenants","Doctrine and Covenants 127",741,12
+41025,"Doctrine and Covenants","Doctrine and Covenants 128",2455,25
+41050,"Doctrine and Covenants","Doctrine and Covenants 129",206,9
+41059,"Doctrine and Covenants","Doctrine and Covenants 130",649,23
+41082,"Doctrine and Covenants","Doctrine and Covenants 131",154,8
+41090,"Doctrine and Covenants","Doctrine and Covenants 132",3264,66
+41156,"Doctrine and Covenants","Doctrine and Covenants 133",2011,74
+41230,"Doctrine and Covenants","Doctrine and Covenants 134",885,12
+41242,"Doctrine and Covenants","Doctrine and Covenants 135",895,7
+41249,"Doctrine and Covenants","Doctrine and Covenants 136",1107,42
+41291,"Doctrine and Covenants","Doctrine and Covenants 137",258,10
+41301,"Doctrine and Covenants","Doctrine and Covenants 138",1858,60
+41361,"Pearl of Great Price","Moses 1",1470,42
+41403,"Pearl of Great Price","Moses 2",1018,31
+41434,"Pearl of Great Price","Moses 3",888,25
+41459,"Pearl of Great Price","Moses 4",1065,32
+41491,"Pearl of Great Price","Moses 5",1960,59
+41550,"Pearl of Great Price","Moses 6",2398,68
+41618,"Pearl of Great Price","Moses 7",2839,69
+41687,"Pearl of Great Price","Moses 8",892,30
+41717,"Pearl of Great Price","Abraham 1",1374,31
+41748,"Pearl of Great Price","Abraham 2",1030,25
+41773,"Pearl of Great Price","Abraham 3",1242,28
+41801,"Pearl of Great Price","Abraham 4",1196,31
+41832,"Pearl of Great Price","Abraham 5",660,21
+41853,"Pearl of Great Price","Joseph Smith--Matthew 1",1526,55
+41908,"Pearl of Great Price","Joseph Smith--History 1",6391,75
+41983,"Pearl of Great Price","Articles of Faith 1",397,13

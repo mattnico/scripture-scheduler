@@ -1,0 +1,583 @@
+{
+    "parameters": {
+        "start_date": "2025-06-08",
+        "end_date": "2025-08-16",
+        "scheduling_method": "chapter",
+        "beginning_verse": "",
+        "show_word_count": false,
+        "volumes": [
+            3
+        ]
+    },
+    "schedule": [
+        {
+            "date": "2025-06-08",
+            "reading": "1 Nephi 4",
+            "word_count": 4111,
+            "verse_count": 113,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-06-09",
+            "reading": "1 Nephi 9",
+            "word_count": 3435,
+            "verse_count": 94,
+            "chapter_count": 5
+        },
+        {
+            "date": "2025-06-10",
+            "reading": "1 Nephi 12",
+            "word_count": 3090,
+            "verse_count": 81,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-06-11",
+            "reading": "1 Nephi 14",
+            "word_count": 3174,
+            "verse_count": 72,
+            "chapter_count": 2
+        },
+        {
+            "date": "2025-06-12",
+            "reading": "1 Nephi 16",
+            "word_count": 3116,
+            "verse_count": 75,
+            "chapter_count": 2
+        },
+        {
+            "date": "2025-06-13",
+            "reading": "1 Nephi 18",
+            "word_count": 3739,
+            "verse_count": 80,
+            "chapter_count": 2
+        },
+        {
+            "date": "2025-06-14",
+            "reading": "1 Nephi 22",
+            "word_count": 4442,
+            "verse_count": 103,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-06-15",
+            "reading": "2 Nephi 3",
+            "word_count": 4162,
+            "verse_count": 87,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-06-16",
+            "reading": "2 Nephi 7",
+            "word_count": 3764,
+            "verse_count": 98,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-06-17",
+            "reading": "2 Nephi 10",
+            "word_count": 4154,
+            "verse_count": 104,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-06-18",
+            "reading": "2 Nephi 17",
+            "word_count": 3669,
+            "verse_count": 130,
+            "chapter_count": 7
+        },
+        {
+            "date": "2025-06-19",
+            "reading": "2 Nephi 24",
+            "word_count": 4200,
+            "verse_count": 153,
+            "chapter_count": 7
+        },
+        {
+            "date": "2025-06-20",
+            "reading": "2 Nephi 26",
+            "word_count": 3179,
+            "verse_count": 63,
+            "chapter_count": 2
+        },
+        {
+            "date": "2025-06-21",
+            "reading": "2 Nephi 29",
+            "word_count": 3497,
+            "verse_count": 81,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-06-22",
+            "reading": "Jacob 1",
+            "word_count": 3483,
+            "verse_count": 82,
+            "chapter_count": 5
+        },
+        {
+            "date": "2025-06-23",
+            "reading": "Jacob 4",
+            "word_count": 2909,
+            "verse_count": 67,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-06-24",
+            "reading": "Jacob 5",
+            "word_count": 3749,
+            "verse_count": 77,
+            "chapter_count": 1
+        },
+        {
+            "date": "2025-06-25",
+            "reading": "Jarom 1",
+            "word_count": 3637,
+            "verse_count": 82,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-06-26",
+            "reading": "Mosiah 1",
+            "word_count": 3220,
+            "verse_count": 66,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-06-27",
+            "reading": "Mosiah 3",
+            "word_count": 3224,
+            "verse_count": 68,
+            "chapter_count": 2
+        },
+        {
+            "date": "2025-06-28",
+            "reading": "Mosiah 7",
+            "word_count": 4195,
+            "verse_count": 85,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-06-29",
+            "reading": "Mosiah 11",
+            "word_count": 4016,
+            "verse_count": 91,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-06-30",
+            "reading": "Mosiah 15",
+            "word_count": 3800,
+            "verse_count": 115,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-07-01",
+            "reading": "Mosiah 19",
+            "word_count": 3568,
+            "verse_count": 99,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-07-02",
+            "reading": "Mosiah 23",
+            "word_count": 4093,
+            "verse_count": 117,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-07-03",
+            "reading": "Mosiah 27",
+            "word_count": 4583,
+            "verse_count": 125,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-07-04",
+            "reading": "Alma 1",
+            "word_count": 4179,
+            "verse_count": 100,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-05",
+            "reading": "Alma 4",
+            "word_count": 3476,
+            "verse_count": 85,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-06",
+            "reading": "Alma 6",
+            "word_count": 3170,
+            "verse_count": 70,
+            "chapter_count": 2
+        },
+        {
+            "date": "2025-07-07",
+            "reading": "Alma 9",
+            "word_count": 4173,
+            "verse_count": 93,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-08",
+            "reading": "Alma 12",
+            "word_count": 4758,
+            "verse_count": 115,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-09",
+            "reading": "Alma 15",
+            "word_count": 3578,
+            "verse_count": 79,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-10",
+            "reading": "Alma 18",
+            "word_count": 4473,
+            "verse_count": 103,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-11",
+            "reading": "Alma 21",
+            "word_count": 3930,
+            "verse_count": 89,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-12",
+            "reading": "Alma 24",
+            "word_count": 4122,
+            "verse_count": 83,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-13",
+            "reading": "Alma 27",
+            "word_count": 3662,
+            "verse_count": 84,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-14",
+            "reading": "Alma 30",
+            "word_count": 3937,
+            "verse_count": 91,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-15",
+            "reading": "Alma 33",
+            "word_count": 4158,
+            "verse_count": 104,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-16",
+            "reading": "Alma 36",
+            "word_count": 3499,
+            "verse_count": 87,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-17",
+            "reading": "Alma 39",
+            "word_count": 3465,
+            "verse_count": 81,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-18",
+            "reading": "Alma 42",
+            "word_count": 3066,
+            "verse_count": 72,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-19",
+            "reading": "Alma 44",
+            "word_count": 3450,
+            "verse_count": 78,
+            "chapter_count": 2
+        },
+        {
+            "date": "2025-07-20",
+            "reading": "Alma 47",
+            "word_count": 4285,
+            "verse_count": 101,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-21",
+            "reading": "Alma 50",
+            "word_count": 4147,
+            "verse_count": 95,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-22",
+            "reading": "Alma 52",
+            "word_count": 3429,
+            "verse_count": 77,
+            "chapter_count": 2
+        },
+        {
+            "date": "2025-07-23",
+            "reading": "Alma 55",
+            "word_count": 3288,
+            "verse_count": 82,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-24",
+            "reading": "Alma 57",
+            "word_count": 3690,
+            "verse_count": 93,
+            "chapter_count": 2
+        },
+        {
+            "date": "2025-07-25",
+            "reading": "Alma 60",
+            "word_count": 4007,
+            "verse_count": 90,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-26",
+            "reading": "Alma 63",
+            "word_count": 3688,
+            "verse_count": 90,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-27",
+            "reading": "Helaman 3",
+            "word_count": 3526,
+            "verse_count": 85,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-28",
+            "reading": "Helaman 5",
+            "word_count": 3154,
+            "verse_count": 78,
+            "chapter_count": 2
+        },
+        {
+            "date": "2025-07-29",
+            "reading": "Helaman 8",
+            "word_count": 4149,
+            "verse_count": 98,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-30",
+            "reading": "Helaman 11",
+            "word_count": 3753,
+            "verse_count": 98,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-07-31",
+            "reading": "Helaman 14",
+            "word_count": 3948,
+            "verse_count": 96,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-08-01",
+            "reading": "3 Nephi 2",
+            "word_count": 3957,
+            "verse_count": 91,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-08-02",
+            "reading": "3 Nephi 5",
+            "word_count": 3797,
+            "verse_count": 85,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-08-03",
+            "reading": "3 Nephi 9",
+            "word_count": 4157,
+            "verse_count": 103,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-08-04",
+            "reading": "3 Nephi 13",
+            "word_count": 4368,
+            "verse_count": 142,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-08-05",
+            "reading": "3 Nephi 18",
+            "word_count": 4487,
+            "verse_count": 135,
+            "chapter_count": 5
+        },
+        {
+            "date": "2025-08-06",
+            "reading": "3 Nephi 21",
+            "word_count": 3914,
+            "verse_count": 111,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-08-07",
+            "reading": "3 Nephi 27",
+            "word_count": 3798,
+            "verse_count": 109,
+            "chapter_count": 6
+        },
+        {
+            "date": "2025-08-08",
+            "reading": "4 Nephi 1",
+            "word_count": 3922,
+            "verse_count": 100,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-08-09",
+            "reading": "Mormon 4",
+            "word_count": 3724,
+            "verse_count": 93,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-08-10",
+            "reading": "Mormon 8",
+            "word_count": 4145,
+            "verse_count": 97,
+            "chapter_count": 4
+        },
+        {
+            "date": "2025-08-11",
+            "reading": "Ether 2",
+            "word_count": 3828,
+            "verse_count": 105,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-08-12",
+            "reading": "Ether 7",
+            "word_count": 4326,
+            "verse_count": 110,
+            "chapter_count": 5
+        },
+        {
+            "date": "2025-08-13",
+            "reading": "Ether 10",
+            "word_count": 4060,
+            "verse_count": 95,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-08-14",
+            "reading": "Ether 13",
+            "word_count": 3514,
+            "verse_count": 95,
+            "chapter_count": 3
+        },
+        {
+            "date": "2025-08-15",
+            "reading": "Moroni 6",
+            "word_count": 3407,
+            "verse_count": 90,
+            "chapter_count": 8
+        },
+        {
+            "date": "2025-08-16",
+            "reading": "Moroni 10",
+            "word_count": 5150,
+            "verse_count": 138,
+            "chapter_count": 4
+        }
+    ],
+    "progress": {
+        "2025-06-08": true,
+        "2025-06-09": true,
+        "2025-06-10": true,
+        "2025-06-11": true,
+        "2025-06-12": true,
+        "2025-06-13": true,
+        "2025-06-14": true,
+        "2025-06-15": false,
+        "2025-06-16": false,
+        "2025-06-17": false,
+        "2025-06-18": false,
+        "2025-06-19": false,
+        "2025-06-20": false,
+        "2025-06-21": false,
+        "2025-06-22": false,
+        "2025-06-23": false,
+        "2025-06-24": false,
+        "2025-06-25": false,
+        "2025-06-26": false,
+        "2025-06-27": false,
+        "2025-06-28": false,
+        "2025-06-29": false,
+        "2025-06-30": false,
+        "2025-07-01": false,
+        "2025-07-02": false,
+        "2025-07-03": false,
+        "2025-07-04": false,
+        "2025-07-05": false,
+        "2025-07-06": false,
+        "2025-07-07": false,
+        "2025-07-08": false,
+        "2025-07-09": false,
+        "2025-07-10": false,
+        "2025-07-11": false,
+        "2025-07-12": false,
+        "2025-07-13": false,
+        "2025-07-14": false,
+        "2025-07-15": false,
+        "2025-07-16": false,
+        "2025-07-17": false,
+        "2025-07-18": false,
+        "2025-07-19": false,
+        "2025-07-20": false,
+        "2025-07-21": false,
+        "2025-07-22": false,
+        "2025-07-23": false,
+        "2025-07-24": false,
+        "2025-07-25": false,
+        "2025-07-26": false,
+        "2025-07-27": false,
+        "2025-07-28": false,
+        "2025-07-29": false,
+        "2025-07-30": false,
+        "2025-07-31": false,
+        "2025-08-01": false,
+        "2025-08-02": false,
+        "2025-08-03": false,
+        "2025-08-04": false,
+        "2025-08-05": false,
+        "2025-08-06": false,
+        "2025-08-07": false,
+        "2025-08-08": false,
+        "2025-08-09": false,
+        "2025-08-10": false,
+        "2025-08-11": false,
+        "2025-08-12": false,
+        "2025-08-13": false,
+        "2025-08-14": false,
+        "2025-08-15": false,
+        "2025-08-16": false
+    },
+    "stats": {
+        "total_words": 266923,
+        "words_per_day": 3814,
+        "days_to_read": 70
+    },
+    "id": "i9vknsx22u",
+    "created": "2025-06-08 22:30:21"
+}

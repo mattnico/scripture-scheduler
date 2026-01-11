@@ -1,0 +1,38 @@
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# User-generated plans (may contain personal data)
+# Uncomment if you want to exclude:
+# plans/*.json
+
+# Node modules (if any)
+node_modules/
+
+# Composer (for future Laravel migration)
+vendor/
+
+# Laravel specific (for future migration)
+storage/*.key
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# Docker (for future migration)
+.docker/
+docker-compose.override.yml

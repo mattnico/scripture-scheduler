@@ -1,0 +1,191 @@
+{
+    "id": "bom2025demo",
+    "type": "seminary_curriculum",
+    "teacher_id": "demo_teacher",
+    "class_name": "Period 1 Seminary - Book of Mormon",
+    "seminary_year": "book_of_mormon",
+    "school_year": "2024-2025",
+    "start_date": "2025-01-06",
+    "end_date": "2025-05-30",
+    "meeting_days": [1, 2, 3, 4, 5],
+    "enrollment_code": "BOM2025",
+    "created": "2024-12-17 10:30:00",
+    "updated": "2024-12-17 14:45:00",
+    "assignments": [
+        {
+            "date": "2025-01-06",
+            "scripture": "1 Nephi 1-5",
+            "lesson_topic": "Lehi's Family Leaves Jerusalem",
+            "is_major_deadline": false,
+            "notes": "Introduce the Book of Mormon, focus on Lehi's obedience"
+        },
+        {
+            "date": "2025-01-07",
+            "scripture": "1 Nephi 6-10",
+            "lesson_topic": "The Brass Plates and Nephi's Courage",
+            "is_major_deadline": false,
+            "notes": "Emphasize courage and faith in following God's commands"
+        },
+        {
+            "date": "2025-01-08",
+            "scripture": "1 Nephi 11-15",
+            "lesson_topic": "The Tree of Life Vision",
+            "is_major_deadline": true,
+            "notes": "MAJOR: Students should be prepared for discussion and quiz"
+        },
+        {
+            "date": "2025-01-09",
+            "scripture": "1 Nephi 16-22",
+            "lesson_topic": "Journey in the Wilderness",
+            "is_major_deadline": false,
+            "notes": "Connect to modern-day spiritual journeys"
+        },
+        {
+            "date": "2025-01-13",
+            "scripture": "2 Nephi 1-5",
+            "lesson_topic": "Lehi's Final Counsel to His Sons",
+            "is_major_deadline": false,
+            "notes": "Focus on family relationships and choosing good over evil"
+        },
+        {
+            "date": "2025-01-14",
+            "scripture": "2 Nephi 6-10",
+            "lesson_topic": "Jacob's Teachings on Christ",
+            "is_major_deadline": false,
+            "notes": "Introduce Christ-centered doctrine early in the year"
+        },
+        {
+            "date": "2025-01-15",
+            "scripture": "2 Nephi 11-25",
+            "lesson_topic": "Isaiah's Prophecies and Nephi's Commentary",
+            "is_major_deadline": true,
+            "notes": "MAJOR: Isaiah chapters - prepare students for difficult material"
+        },
+        {
+            "date": "2025-01-16",
+            "scripture": "2 Nephi 26-30",
+            "lesson_topic": "Prophecies of the Latter Days",
+            "is_major_deadline": false,
+            "notes": "Connect prophecies to our modern day"
+        },
+        {
+            "date": "2025-01-17",
+            "scripture": "2 Nephi 31-33",
+            "lesson_topic": "The Doctrine of Christ",
+            "is_major_deadline": false,
+            "notes": "Essential doctrine - faith, repentance, baptism, Holy Ghost"
+        },
+        {
+            "date": "2025-01-21",
+            "scripture": "Jacob 1-4",
+            "lesson_topic": "Jacob's Ministry and Warnings",
+            "is_major_deadline": false,
+            "notes": "Address pride and materialism"
+        },
+        {
+            "date": "2025-01-22",
+            "scripture": "Jacob 5-7",
+            "lesson_topic": "The Allegory of the Olive Tree",
+            "is_major_deadline": true,
+            "notes": "MAJOR: Complex allegory - prepare visual aids and explanations"
+        },
+        {
+            "date": "2025-01-23",
+            "scripture": "Enos 1 - Words of Mormon",
+            "lesson_topic": "Personal Prayer and Record Keeping",
+            "is_major_deadline": false,
+            "notes": "Emphasize personal revelation and the importance of records"
+        },
+        {
+            "date": "2025-01-24",
+            "scripture": "Mosiah 1-6",
+            "lesson_topic": "King Benjamin's Address",
+            "is_major_deadline": true,
+            "notes": "MAJOR: One of the greatest sermons in scripture - test preparation"
+        },
+        {
+            "date": "2025-01-27",
+            "scripture": "Mosiah 7-11",
+            "lesson_topic": "Limhi's People and Abinadi's Mission",
+            "is_major_deadline": false,
+            "notes": "Courage to stand for truth, consequences of wickedness"
+        },
+        {
+            "date": "2025-01-28",
+            "scripture": "Mosiah 12-17",
+            "lesson_topic": "Abinadi's Testimony and Martyrdom",
+            "is_major_deadline": false,
+            "notes": "Standing for truth regardless of consequences"
+        },
+        {
+            "date": "2025-01-29",
+            "scripture": "Mosiah 18-24",
+            "lesson_topic": "Alma's Ministry and the Waters of Mormon",
+            "is_major_deadline": false,
+            "notes": "Baptism covenant, building Zion communities"
+        },
+        {
+            "date": "2025-01-30",
+            "scripture": "Mosiah 25-29",
+            "lesson_topic": "Uniting the People and Choosing Judges",
+            "is_major_deadline": false,
+            "notes": "Unity in Christ, righteous government"
+        },
+        {
+            "date": "2025-02-03",
+            "scripture": "Alma 1-4",
+            "lesson_topic": "Church Growth and Persecution",
+            "is_major_deadline": false,
+            "notes": "Dealing with opposition and staying faithful"
+        },
+        {
+            "date": "2025-02-04",
+            "scripture": "Alma 5-7",
+            "lesson_topic": "Alma's Questions to Zarahemla",
+            "is_major_deadline": true,
+            "notes": "MAJOR: Self-evaluation questions - prepare for personal reflection"
+        },
+        {
+            "date": "2025-02-05",
+            "scripture": "Alma 8-12",
+            "lesson_topic": "Alma and Amulek in Ammonihah",
+            "is_major_deadline": false,
+            "notes": "Partnership in missionary work, faith under persecution"
+        },
+        {
+            "date": "2025-02-06",
+            "scripture": "Alma 13-16",
+            "lesson_topic": "The Holy Priesthood and Destruction of Ammonihah",
+            "is_major_deadline": false,
+            "notes": "Priesthood doctrine, consequences of rejecting truth"
+        },
+        {
+            "date": "2025-02-07",
+            "scripture": "Alma 17-22",
+            "lesson_topic": "The Sons of Mosiah - Missionary Work Among the Lamanites",
+            "is_major_deadline": true,
+            "notes": "MAJOR: Great missionary stories - test on conversion principles"
+        },
+        {
+            "date": "2025-02-10",
+            "scripture": "Alma 23-29",
+            "lesson_topic": "The Anti-Nephi-Lehies and Their Conversion",
+            "is_major_deadline": false,
+            "notes": "True conversion, the power of testimony"
+        },
+        {
+            "date": "2025-02-11",
+            "scripture": "Alma 30-35",
+            "lesson_topic": "Korihor the Anti-Christ and Missionary Work",
+            "is_major_deadline": false,
+            "notes": "Recognizing false teachings, bearing testimony"
+        },
+        {
+            "date": "2025-02-12",
+            "scripture": "Alma 36-42",
+            "lesson_topic": "Alma's Counsel to His Sons",
+            "is_major_deadline": true,
+            "notes": "MAJOR: Essential doctrine on repentance, justice, and mercy"
+        }
+    ]
+} 
