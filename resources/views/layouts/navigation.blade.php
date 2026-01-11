@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('plans.index')" :active="request()->routeIs('plans.*')">
                         {{ __('My Plans') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('enrollments.index')" :active="request()->routeIs('enrollments.*')">
+                        {{ __('Enrollments') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('curricula.index')" :active="request()->routeIs('curricula.*')">
                         {{ __('Curricula') }}
                     </x-nav-link>
@@ -78,6 +81,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('plans.index')" :active="request()->routeIs('plans.*')">
                 {{ __('My Plans') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('enrollments.index')" :active="request()->routeIs('enrollments.*')">
+                {{ __('Enrollments') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('curricula.index')" :active="request()->routeIs('curricula.*')">
                 {{ __('Curricula') }}
