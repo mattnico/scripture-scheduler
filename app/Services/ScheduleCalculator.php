@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\Scripture;
 use Carbon\Carbon;
+use Illuminate\Support\Collection;
 
 class ScheduleCalculator
 {
@@ -11,17 +12,86 @@ class ScheduleCalculator
     {
         $startDate = Carbon::parse($params['start_date']);
         $endDate = Carbon::parse($params['end_date']);
-        $volumes = $params['volumes'];
+        $volumes = $params['volumes'] ?? [];
         $schedulingMethod = $params['scheduling_method'] ?? 'verse';
         $beginningVerse = $params['beginning_verse'] ?? null;
+        $requiredChapters = $params['required_chapters'] ?? null;
 
         $totalDays = $startDate->diffInDays($endDate) + 1;
+
+        if ($requiredChapters) {
+            return $this->calculateFromRequiredChapters($startDate, $totalDays, $requiredChapters, $schedulingMethod);
+        }
 
         if ($schedulingMethod === 'chapter') {
             return $this->calculateChapterSchedule($startDate, $totalDays, $volumes, $beginningVerse);
         }
 
         return $this->calculateVerseSchedule($startDate, $totalDays, $volumes, $beginningVerse);
+    }
+
+    protected function calculateFromRequiredChapters(Carbon $startDate, int $totalDays, Collection $requiredChapters, string $schedulingMethod): array
+    {
+        $allChapters = [];
+
+        foreach ($requiredChapters as $req) {
+            $chapterStart = $req->chapter_start;
+            $chapterEnd = $req->chapter_end ?? $req->chapter_start;
+
+            for ($ch = $chapterStart; $ch <= $chapterEnd; $ch++) {
+                $chapterData = Scripture::where('book_title', $req->book_title)
+                    ->where('chapter', $ch)
+                    ->selectRaw('book_title, chapter, volume_id, SUM(word_count) as word_count, COUNT(*) as verse_count')
+                    ->groupBy('book_title', 'chapter', 'volume_id')
+                    ->first();
+
+                if ($chapterData) {
+                    $allChapters[] = $chapterData;
+                }
+            }
+        }
+
+        if (empty($allChapters)) {
+            return $this->emptyResult();
+        }
+
+        $totalWords = array_sum(array_map(fn($c) => $c->word_count, $allChapters));
+        $wordsPerDay = (int) ceil($totalWords / $totalDays);
+
+        $schedule = [];
+        $currentIndex = 0;
+        $totalChapterCount = count($allChapters);
+
+        for ($day = 0; $day < $totalDays && $currentIndex < $totalChapterCount; $day++) {
+            $date = $startDate->copy()->addDays($day)->toDateString();
+            $dayWords = 0;
+            $dayChapters = [];
+
+            while ($currentIndex < $totalChapterCount && $dayWords < $wordsPerDay) {
+                $chapter = $allChapters[$currentIndex];
+                $dayWords += $chapter->word_count;
+                $dayChapters[] = "{$chapter->book_title} {$chapter->chapter}";
+                $currentIndex++;
+            }
+
+            if (!empty($dayChapters)) {
+                $schedule[] = [
+                    'date' => $date,
+                    'reading' => count($dayChapters) === 1 
+                        ? $dayChapters[0] 
+                        : $this->formatChapterRange($dayChapters),
+                    'word_count' => $dayWords,
+                    'chapter_count' => count($dayChapters),
+                ];
+            }
+        }
+
+        return [
+            'schedule' => $schedule,
+            'total_words' => $totalWords,
+            'words_per_day' => $wordsPerDay,
+            'total_days' => count($schedule),
+        ];
     }
 
     protected function calculateVerseSchedule(Carbon $startDate, int $totalDays, array $volumes, ?string $beginningVerse): array

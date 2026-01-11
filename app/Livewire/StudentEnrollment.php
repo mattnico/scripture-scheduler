@@ -73,7 +73,9 @@ class StudentEnrollment extends Component
             'enrolled_at' => now(),
         ]);
 
-        $volumes = $this->curriculum->requiredChapters
+        $requiredChapters = $this->curriculum->requiredChapters;
+        
+        $volumes = $requiredChapters
             ->pluck('volume_id')
             ->unique()
             ->values()
@@ -83,7 +85,7 @@ class StudentEnrollment extends Component
         $result = $calculator->calculate([
             'start_date' => $this->startDate,
             'end_date' => $this->endDate,
-            'volumes' => $volumes,
+            'required_chapters' => $requiredChapters,
             'scheduling_method' => $this->schedulingMethod,
         ]);
 
