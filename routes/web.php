@@ -1,11 +1,12 @@
 <?php
 
 use App\Http\Controllers\CurriculumController;
+use App\Http\Controllers\PlanController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('plans.create');
 });
 
 Route::get('/dashboard', function () {
@@ -21,6 +22,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/curricula/create', [CurriculumController::class, 'create'])->name('curricula.create');
     Route::get('/curricula/{curriculum}/edit', [CurriculumController::class, 'edit'])->name('curricula.edit');
     Route::delete('/curricula/{curriculum}', [CurriculumController::class, 'destroy'])->name('curricula.destroy');
+
+    Route::get('/plans', [PlanController::class, 'index'])->name('plans.index');
+    Route::get('/plans/create', [PlanController::class, 'create'])->name('plans.create');
+    Route::get('/plans/{plan}', [PlanController::class, 'show'])->name('plans.show');
+    Route::delete('/plans/{plan}', [PlanController::class, 'destroy'])->name('plans.destroy');
 });
 
 require __DIR__.'/auth.php';

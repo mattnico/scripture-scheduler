@@ -14,6 +14,7 @@ class CurriculumEditor extends Component
     
     public string $name = '';
     public string $deadline = '';
+    public string $enrollmentCode = '';
     public array $chapters = [];
     
     public string $searchQuery = '';
@@ -25,6 +26,7 @@ class CurriculumEditor extends Component
     protected $rules = [
         'name' => 'required|string|max:255',
         'deadline' => 'required|date|after:today',
+        'enrollmentCode' => 'nullable|string|max:20|alpha_num',
         'chapters' => 'required|array|min:1',
         'chapters.*.book_title' => 'required|string',
         'chapters.*.chapter_start' => 'required|integer|min:1',
@@ -44,6 +46,7 @@ class CurriculumEditor extends Component
             $this->curriculum = Curriculum::with('requiredChapters')->findOrFail($curriculumId);
             $this->name = $this->curriculum->name;
             $this->deadline = $this->curriculum->deadline->format('Y-m-d');
+            $this->enrollmentCode = $this->curriculum->enrollment_code;
             $this->chapters = $this->curriculum->requiredChapters->map(fn ($ch) => [
                 'id' => $ch->id,
                 'book_title' => $ch->book_title,
@@ -79,6 +82,24 @@ class CurriculumEditor extends Component
             ->unique('display')
             ->values()
             ->toArray();
+    }
+
+    public function selectSearchResult(int $index): void
+    {
+        if (!isset($this->searchResults[$index])) {
+            return;
+        }
+        
+        $result = $this->searchResults[$index];
+        $this->chapters[] = [
+            'book_title' => $result['book_title'],
+            'chapter_start' => $result['chapter'],
+            'chapter_end' => null,
+            'volume_id' => $result['volume_id'],
+        ];
+        
+        $this->searchQuery = '';
+        $this->searchResults = [];
     }
 
     public function addChapter(string $bookTitle, int $chapter, int $volumeId): void
@@ -135,10 +156,13 @@ class CurriculumEditor extends Component
     {
         $this->validate();
 
+        $enrollmentCode = !empty($this->enrollmentCode) ? strtoupper($this->enrollmentCode) : null;
+
         if ($this->curriculum) {
             $this->curriculum->update([
                 'name' => $this->name,
                 'deadline' => $this->deadline,
+                'enrollment_code' => $enrollmentCode ?? $this->curriculum->enrollment_code,
             ]);
             
             $this->curriculum->requiredChapters()->delete();
@@ -147,6 +171,7 @@ class CurriculumEditor extends Component
                 'teacher_id' => Auth::id(),
                 'name' => $this->name,
                 'deadline' => $this->deadline,
+                'enrollment_code' => $enrollmentCode,
             ]);
         }
 

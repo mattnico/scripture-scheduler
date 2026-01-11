@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Curriculum;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\View\View;
 
 class CurriculumController extends Controller
@@ -26,14 +27,14 @@ class CurriculumController extends Controller
 
     public function edit(Curriculum $curriculum): View
     {
-        $this->authorize('update', $curriculum);
+        Gate::authorize('update', $curriculum);
         
         return view('curricula.edit', compact('curriculum'));
     }
 
     public function destroy(Curriculum $curriculum)
     {
-        $this->authorize('delete', $curriculum);
+        Gate::authorize('delete', $curriculum);
         
         $curriculum->delete();
 

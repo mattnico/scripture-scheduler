@@ -55,6 +55,30 @@
         </div>
 
         <div>
+            <label for="enrollmentCode" class="block text-sm font-medium text-gray-700 mb-1">
+                Enrollment Code (optional)
+            </label>
+            <input 
+                type="text" 
+                id="enrollmentCode"
+                wire:model="enrollmentCode"
+                placeholder="Leave blank for auto-generated code"
+                maxlength="20"
+                class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 font-mono uppercase"
+            >
+            <p class="text-sm text-gray-500 mt-1">
+                @if ($curriculum && $curriculum->enrollment_code)
+                    Current code: <span class="font-mono font-medium">{{ $curriculum->enrollment_code }}</span>
+                @else
+                    A 6-character code will be generated if left blank.
+                @endif
+            </p>
+            @error('enrollmentCode')
+                <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+            @enderror
+        </div>
+
+        <div>
             <label class="block text-sm font-medium text-gray-700 mb-1">
                 Required Chapters
             </label>
@@ -69,10 +93,10 @@
                 
                 @if (count($searchResults) > 0)
                     <div class="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto">
-                        @foreach ($searchResults as $result)
+                        @foreach ($searchResults as $index => $result)
                             <button 
                                 type="button"
-                                wire:click="addChapter('{{ $result['book_title'] }}', {{ $result['chapter'] }}, {{ $result['volume_id'] }})"
+                                wire:click="selectSearchResult({{ $index }})"
                                 class="w-full text-left px-4 py-2 hover:bg-gray-100 flex justify-between items-center"
                             >
                                 <span>{{ $result['display'] }}</span>
