@@ -23,6 +23,11 @@ class StudentEnrollment extends Component
     public function mount(): void
     {
         $this->startDate = now()->toDateString();
+        
+        if ($code = request()->query('code')) {
+            $this->enrollmentCode = strtoupper($code);
+            $this->lookupCode();
+        }
     }
 
     public function lookupCode(): void

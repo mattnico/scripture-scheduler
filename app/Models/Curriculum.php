@@ -67,4 +67,15 @@ class Curriculum extends Model
                 : 1;
         });
     }
+
+    public function getEnrollmentUrlAttribute(): string
+    {
+        return route('enrollments.create') . '?code=' . $this->enrollment_code;
+    }
+
+    public function getQrCodeUrlAttribute(): string
+    {
+        $data = urlencode($this->enrollment_url);
+        return "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data={$data}";
+    }
 }
