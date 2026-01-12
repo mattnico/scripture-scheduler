@@ -56,15 +56,18 @@ RUN apk add --no-cache \
     nginx \
     supervisor \
     sqlite \
+    sqlite-dev \
     libzip-dev \
     zip \
     unzip \
     curl \
+    oniguruma-dev \
     && docker-php-ext-install \
     pdo_sqlite \
     zip \
     bcmath \
-    opcache
+    opcache \
+    mbstring
 
 # Configure PHP for production
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
