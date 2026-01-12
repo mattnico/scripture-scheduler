@@ -1,7 +1,7 @@
 ---
 id: task-4
 title: Verse/Chapter Autocomplete API
-status: To Do
+status: Done
 assignee: []
 created_date: '2026-01-11 05:27'
 labels: []

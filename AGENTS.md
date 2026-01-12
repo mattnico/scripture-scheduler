@@ -2,232 +2,222 @@
 
 ## Project Overview
 
-A PHP web application for creating personalized scripture reading schedules. Users can select scripture volumes (Old Testament, New Testament, Book of Mormon, D&C, Pearl of Great Price), set date ranges, and generate balanced reading plans based on word count rather than chapter count.
+A Laravel web application for creating personalized scripture reading schedules. Teachers create curricula with required chapters, students join via enrollment codes and create personalized reading plans balanced by word count rather than chapter count.
 
-**Tech Stack**: PHP 7+, Bootstrap 5, Vanilla JavaScript, SQLite/CSV data storage, wkhtmltopdf for PDF generation
+**Tech Stack**: Laravel 12, Livewire 3, Tailwind CSS, Alpine.js, SQLite
 
 ---
 
 ## Build/Run Commands
 
 ```bash
-# No build step required - PHP served directly
-# Ensure PHP is installed and web server configured
+# Install dependencies
+composer install
+npm install
 
-# Local development with PHP built-in server:
-php -S localhost:8000
+# Set up environment
+cp .env.example .env
+php artisan key:generate
 
-# The application expects to run in a subdirectory called 'schedule'
-# URL structure: /schedule/index.php, /schedule/plan/{id}, etc.
+# Database setup
+php artisan migrate
+
+# Build frontend assets
+npm run build
+
+# Local development
+php artisan serve
+npm run dev  # (in separate terminal for Vite HMR)
+
+# Production build
+npm run build
 ```
 
-### PDF Generation
+### Database
 
-PDF generation requires `wkhtmltopdf`:
-```bash
-# macOS
-brew install wkhtmltopdf
+SQLite database at `database/database.sqlite` with 41,995 scripture verses pre-loaded.
 
-# Expected path: /usr/local/bin/wkhtmltopdf
-```
+### Legacy Code
 
-### No Test Suite
-
-This project has no automated tests. Manual testing required.
+Legacy PHP files are preserved in `legacy/` folder. Do NOT delete this folder.
 
 ---
 
 ## Code Style Guidelines
 
-### PHP Conventions
+### Laravel Conventions
 
-**File Structure**:
-- Entry points: `index.php`, `calc.php`, `plan.php`, `edit.php`
-- API endpoints: `get_verses.php`, `get_chapters.php`
-- Data files: `data/*.csv`, `data/*.db`
-- Plan storage: `plans/*.json`
-
-**Error Handling**:
-```php
-// Pattern: Enable debugging at top of file when needed
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-// Validation pattern: die() with descriptive error
-if (!isset($_REQUEST['required_param'])) {
-    die('Error: Missing required parameters');
-}
-
-// File existence checks
-if (!file_exists($plan_file)) {
-    die('Error: Plan not found');
-}
+**Directory Structure**:
 ```
+app/
+├── Http/Controllers/     # Route controllers
+├── Livewire/            # Livewire components
+├── Models/              # Eloquent models
+└── Services/            # Business logic (ScheduleCalculator, ScriptureLinkGenerator)
 
-**Function Definitions**:
-```php
-// Guard against redefinition (used throughout)
-if (!function_exists('load_csv_data')) {
-    function load_csv_data() {
-        // ...
-    }
-}
+resources/views/
+├── layouts/             # app.blade.php, guest.blade.php
+├── components/          # Blade components
+├── livewire/            # Livewire component views
+├── plans/               # Plan-related views
+├── curricula/           # Curriculum views
+└── exports/             # Export views (table, calendar)
 ```
 
 **Naming Conventions**:
-- Functions: `snake_case` (e.g., `load_csv_data`, `generate_plan_id`, `days_to_read`)
-- Variables: `$snake_case` (e.g., `$plan_data`, `$total_words`, `$scheduling_method`)
-- Constants: Volume IDs are integers (1=OT, 2=NT, 3=BoM, 4=D&C, 5=PGP)
+- Controllers: `PascalCase` with `Controller` suffix (e.g., `PlanController`)
+- Models: `PascalCase` singular (e.g., `Plan`, `Curriculum`)
+- Livewire: `PascalCase` (e.g., `PlanGenerator`, `PlanViewer`)
+- Views: `kebab-case.blade.php`
+- Routes: `plans.show`, `curricula.index` (resource naming)
 
-**Array Style**:
+**Eloquent Patterns**:
 ```php
-// Use array() syntax (legacy PHP compatibility)
-$data = array(
-    'key' => 'value',
-    'nested' => array('item1', 'item2')
-);
-
-// Associative arrays for data structures
-$plan_data = array(
-    'parameters' => array(...),
-    'schedule' => array(...),
-    'progress' => array(...)
-);
-```
-
-**HTML in PHP**:
-```php
-// Short echo syntax for inline values
-<input value="<?= date('Y-m-d') ?>">
-
-// Heredoc-style mixing for complex output
-echo '<table class="pure-table">';
-foreach($data as $row) {
-    echo "<tr><td>{$row['value']}</td></tr>";
+// Relationships
+public function user(): BelongsTo
+{
+    return $this->belongsTo(User::class);
 }
-echo '</table>';
+
+// JSON casting for schedule/progress data
+protected $casts = [
+    'volumes' => 'array',
+    'schedule' => 'array',
+    'progress' => 'array',
+];
 ```
 
-### JavaScript Conventions
+### Livewire Conventions
 
-**Pattern**: Vanilla JS, no frameworks. All JS is inline in PHP files within `<script>` tags.
+```php
+// Component properties with validation
+public string $startDate = '';
+public array $selectedVolumes = [3];
+
+// Wire model binding
+public function updatedSearchQuery(): void
+{
+    // React to property changes
+}
+
+// Actions
+public function toggleProgress(string $date): void
+{
+    $this->plan->toggleProgress($date);
+}
+```
+
+**Blade with Livewire**:
+```blade
+{{-- Wire model binding --}}
+<input type="date" wire:model="startDate">
+
+{{-- Click handlers with loading states --}}
+<button wire:click="toggleProgress('{{ $date }}')"
+        wire:loading.attr="disabled"
+        wire:target="toggleProgress('{{ $date }}')">
+    <span wire:loading wire:target="toggleProgress('{{ $date }}')">...</span>
+    <span wire:loading.remove wire:target="toggleProgress('{{ $date }}')">Toggle</span>
+</button>
+```
+
+### Alpine.js Conventions
 
 ```javascript
-// DOM ready pattern
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize
+// Theme store (in layout)
+Alpine.store('theme', {
+    dark: localStorage.getItem('darkMode') === 'true',
+    toggle() {
+        this.dark = !this.dark;
+        localStorage.setItem('darkMode', this.dark);
+        document.documentElement.classList.toggle('dark', this.dark);
+    }
 });
-
-// Variable naming: camelCase
-let allVerses = [];
-let currentMode = 'verse';
-const schedulingMethodInteractive = document.getElementById('scheduling_method_interactive');
-
-// Event listeners
-input.addEventListener('input', function() {
-    // ...
-});
-
-// Fetch pattern
-fetch('get_verses.php')
-    .then(response => response.json())
-    .then(data => { /* ... */ })
-    .catch(error => console.error('Error:', error));
 ```
 
-### CSS Conventions
+### Tailwind CSS Conventions
 
-**File**: `theme.css` - Comprehensive theme with dark/light mode support
+**Dark Mode**: Uses `class` strategy via `darkMode: 'class'` in tailwind.config.js
 
-**CSS Variables**:
-```css
-:root {
-    --bg-primary: #000000;
-    --bg-secondary: #1a1a1a;
-    --text-primary: #ffffff;
-    --accent-primary: #9D8255;  /* Subdued gold */
-    --border-color: #444444;
-}
+```blade
+{{-- Always include both light and dark variants --}}
+<div class="bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100">
 ```
 
-**Theme Toggle**:
-```css
-body.light-mode {
-    --bg-primary: var(--bg-primary-light);
-    /* etc. */
-}
+**Common Classes**:
+```blade
+{{-- Cards --}}
+<div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+
+{{-- Buttons --}}
+<button class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md">
+
+{{-- Form inputs --}}
+<input class="w-full rounded-md border-gray-300 dark:border-gray-600 
+              dark:bg-gray-700 dark:text-gray-100 
+              focus:border-indigo-500 focus:ring-indigo-500">
 ```
 
 ---
 
 ## Data Structures
 
-### Plan JSON Schema (`plans/{id}.json`)
-
-```json
-{
-    "id": "abc123xyz",
-    "created": "2024-01-15 10:30:00",
-    "updated": "2024-01-16 08:00:00",
-    "parameters": {
-        "start_date": "2024-01-01",
-        "end_date": "2024-12-31",
-        "scheduling_method": "verse|chapter",
-        "beginning_verse": "1 Nephi 1:1",
-        "show_word_count": true,
-        "volumes": [3]
-    },
-    "schedule": [
-        {
-            "date": "2024-01-01",
-            "reading": "1 Nephi 1:20",
-            "word_count": 1500,
-            "verse_count": 20,
-            "chapter_count": 1,
-            "virtual_previous_reading": "1 Nephi 1:0"
-        }
-    ],
-    "progress": {
-        "2024-01-01": true,
-        "2024-01-02": false
-    },
-    "stats": {
-        "total_words": 268163,
-        "words_per_day": 735,
-        "days_to_read": 365
-    }
-}
-```
-
-### Scripture Reference Parsing
+### Plan Model
 
 ```php
-// Pattern: "Book Chapter:Verse" or "Book Chapter"
-preg_match('/^(.+?)\s+(\d+)(?::(\d+))?$/', $reference, $matches);
-// $matches[1] = book name (e.g., "1 Nephi", "Doctrine and Covenants")
-// $matches[2] = chapter number
-// $matches[3] = verse number (optional)
+// Key fields
+'user_id'           // Owner
+'start_date'        // Carbon date
+'end_date'          // Carbon date
+'scheduling_method' // 'verse' or 'chapter'
+'beginning_verse'   // Optional start point
+'volumes'           // Array [1,2,3,4,5]
+'total_words'       // Calculated total
+'words_per_day'     // Target daily reading
+'schedule'          // Array of daily readings
+'progress'          // Array of date => boolean
+'public_token'      // For sharing (nullable)
 ```
+
+**Schedule Entry Structure**:
+```php
+[
+    'date' => '2024-01-01',
+    'reading' => '1 Nephi 1:20',
+    'word_count' => 1500,
+    'verse_count' => 20,           // or chapter_count
+    'previous_reading' => '1 Nephi 1:0',
+]
+```
+
+### Volume IDs
+
+| ID | Volume |
+|----|--------|
+| 1 | Old Testament |
+| 2 | New Testament |
+| 3 | Book of Mormon |
+| 4 | Doctrine and Covenants |
+| 5 | Pearl of Great Price |
 
 ---
 
 ## URL Routing
 
-**Clean URLs via `.htaccess`**:
-```
-/schedule/plan/{id}        → plan.php?id={id}
-/schedule/plan/{id}/edit   → edit.php?id={id}
-```
-
-**Fallback parsing in PHP**:
-```php
-// Try GET parameter first, then parse REQUEST_URI
-if (isset($_GET['id'])) {
-    $plan_id = $_GET['id'];
-} else if (preg_match('#/plan/([a-z0-9]+)#', $_SERVER['REQUEST_URI'], $matches)) {
-    $plan_id = $matches[1];
-}
-```
+| Route | Controller/View | Purpose |
+|-------|-----------------|---------|
+| `GET /` | redirect | → `/plans/create` |
+| `GET /plans/create` | PlanGenerator (Livewire) | Create new plan |
+| `GET /plans/{plan}` | PlanViewer (Livewire) | View/track plan |
+| `GET /plans/{plan}/edit` | PlanEditor (Livewire) | Edit plan dates |
+| `GET /plans/{plan}/calendar.ics` | CalendarController | ICS feed |
+| `GET /plans/{plan}/export/csv` | ExportController | CSV download |
+| `GET /plans/{plan}/export/table` | ExportController | Printable table |
+| `GET /plans/{plan}/export/calendar` | ExportController | Calendar view |
+| `GET /share/{token}` | PublicPlanController | Public share link |
+| `GET /curricula` | CurriculumController | Teacher dashboard |
+| `GET /curricula/create` | CurriculumEditor (Livewire) | Create curriculum |
+| `GET /enrollments` | EnrollmentController | Student enrollments |
 
 ---
 
@@ -235,77 +225,96 @@ if (isset($_GET['id'])) {
 
 | File | Purpose |
 |------|---------|
-| `index.php` | Main entry form |
-| `calc.php` | Schedule generation, PDF output |
-| `plan.php` | Interactive plan viewer |
-| `edit.php` | Edit existing plans |
-| `calendar.php` | ICS calendar feed generation |
-| `get_verses.php` | JSON API for verse autocomplete |
-| `get_chapters.php` | JSON API for chapter autocomplete |
-| `theme.css` | All styling, dark/light themes |
-| `data/lds-scriptures.csv` | Scripture verse data |
-| `data/lds-scriptures-chapters.csv` | Chapter-level aggregated data |
+| `app/Livewire/PlanGenerator.php` | Create new reading plans |
+| `app/Livewire/PlanViewer.php` | View plan, toggle progress, recalculate |
+| `app/Livewire/CurriculumEditor.php` | Create/edit curricula with chapter search |
+| `app/Services/ScheduleCalculator.php` | Word-balanced schedule generation |
+| `app/Services/ScriptureLinkGenerator.php` | ChurchofJesusChrist.org links |
+| `app/Http/Controllers/CalendarController.php` | ICS feed generation |
+| `app/Http/Controllers/ExportController.php` | CSV, table, calendar exports |
+| `resources/js/app.js` | Alpine.js initialization |
+| `resources/css/app.css` | Tailwind imports |
+| `tailwind.config.js` | Tailwind config with dark mode |
 
 ---
 
 ## Common Patterns
 
-### Volume ID Mapping
+### Progress Toggle (AJAX via Livewire)
 
 ```php
-$volume_map = array(
-    'Old Testament' => 1,
-    'New Testament' => 2,
-    'Book of Mormon' => 3,
-    'Doctrine and Covenants' => 4,
-    'Pearl of Great Price' => 5
-);
-
-// Reverse for form handling
-// ot=1, nt=2, bom=3, dc=4, pgp=5
-```
-
-### Form Parameter Handling
-
-```php
-// Checkbox volumes
-if (isset($_REQUEST['bom']) && $_REQUEST['bom'] == 'on') {
-    $volumes[] = 3;
+// In Livewire component
+public function toggleProgress(string $date): void
+{
+    $this->plan->toggleProgress($date);
 }
 
-// Date handling
-$start_date = strtotime($_REQUEST['start_date']);
-$end_date = strtotime($_REQUEST['end_date']);
+// In Plan model
+public function toggleProgress(string $date): void
+{
+    $progress = $this->progress ?? [];
+    $progress[$date] = !($progress[$date] ?? false);
+    $this->update(['progress' => $progress]);
+}
 ```
 
-### Progress Toggle Pattern
+### Schedule Recalculation
 
 ```php
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['toggle_progress'])) {
-    $date = $_POST['date'];
-    $plan_data['progress'][$date] = !$plan_data['progress'][$date];
-    file_put_contents($plan_file, json_encode($plan_data, JSON_PRETTY_PRINT));
-    header('Location: plan.php?id=' . $plan_id);
-    exit;
+// Preserves completed readings, redistributes remaining
+public function recalculate(): void
+{
+    $completedDates = array_keys(array_filter($this->plan->progress ?? []));
+    // ... recalculate from today with remaining content
 }
+```
+
+### Dark Mode (FOUC Prevention)
+
+```blade
+{{-- In <head> before CSS loads --}}
+<script>
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.documentElement.classList.add('dark');
+    }
+</script>
+```
+
+### Scripture Link Generation
+
+```php
+$generator = new ScriptureLinkGenerator();
+$url = $generator->generate('1 Nephi 3:7');
+// Returns: https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng#p7
 ```
 
 ---
 
 ## Important Notes
 
-1. **No ORM/Framework**: Direct file operations and array manipulation
-2. **No Package Manager**: No composer.json, no npm - all dependencies via CDN
-3. **Session Usage**: Minimal - `session_start()` only in teacher dashboard
-4. **Security**: Input sanitization via `htmlspecialchars()`, basic parameter validation
-5. **PDF Generation**: Uses `wkhtmltopdf` command line tool
-6. **Data Storage**: JSON files in `plans/` directory, CSV files for scripture data
+1. **Authentication**: Laravel Breeze with email/password
+2. **Database**: SQLite with Eloquent ORM
+3. **Frontend Build**: Vite with Tailwind CSS and Alpine.js
+4. **Session**: Laravel default session handling
+5. **No PDF Generation**: wkhtmltopdf not yet integrated (use print views)
+6. **Legacy Folder**: `legacy/` contains original PHP files - DO NOT DELETE
 
 ---
 
-## TODO from Code Comments
+## Development Tips
 
-From `plan.php`:
-- Make progress toggle not reload page (AJAX instead of form submit)
-- Fix "Open on your phone" button formatting
-- Consider: Email/SMS reminders, progress streaks, sharing features
+```bash
+# Clear caches
+php artisan cache:clear
+php artisan config:clear
+php artisan view:clear
+
+# Rebuild assets
+npm run build
+
+# Check routes
+php artisan route:list
+
+# Fresh database (caution: loses data)
+php artisan migrate:fresh
+```

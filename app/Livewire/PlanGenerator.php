@@ -10,6 +10,7 @@ use Livewire\Component;
 
 class PlanGenerator extends Component
 {
+    public string $name = '';
     public string $startDate = '';
     public string $endDate = '';
     public string $schedulingMethod = 'verse';
@@ -144,6 +145,7 @@ class PlanGenerator extends Component
 
         $plan = Plan::create([
             'user_id' => Auth::id(),
+            'name' => $this->name ?: null,
             'start_date' => $this->startDate,
             'end_date' => $this->endDate,
             'scheduling_method' => $this->schedulingMethod,

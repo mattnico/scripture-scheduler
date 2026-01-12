@@ -1,59 +1,123 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Scripture Scheduler
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A Laravel web application for creating personalized scripture reading schedules. Balance your reading by **word count** rather than chapter count for a more consistent daily reading experience.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Word-Balanced Schedules**: Reading plans distributed by word count ensure consistent daily reading time
+- **Multiple Scripture Volumes**: Old Testament, New Testament, Book of Mormon, Doctrine & Covenants, Pearl of Great Price
+- **Flexible Scheduling**: Choose verse-by-verse or chapter-by-chapter progression
+- **Custom Start Points**: Begin reading from any verse or chapter
+- **Progress Tracking**: Mark readings complete with AJAX (no page reload)
+- **Schedule Recalculation**: Catch up when you fall behind - preserves completed readings
+- **Export Options**: CSV, printable table, calendar view, ICS calendar feed
+- **Public Sharing**: Share read-only view of your plan via link
+- **Dark Mode**: Toggle between light and dark themes
+- **Curricula System**: Teachers create curricula, students join via enrollment codes
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Tech Stack
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Backend**: Laravel 12, PHP 8.2+
+- **Frontend**: Livewire 3, Alpine.js, Tailwind CSS
+- **Database**: SQLite (41,995 scripture verses pre-loaded)
+- **Build**: Vite
 
-## Learning Laravel
+## Quick Start
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+```bash
+# Clone and install
+git clone <repository-url>
+cd schedule
+composer install
+npm install
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+# Configure environment
+cp .env.example .env
+php artisan key:generate
 
-## Laravel Sponsors
+# Database setup
+php artisan migrate
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+# Build assets
+npm run build
 
-### Premium Partners
+# Start development server
+php artisan serve
+# In another terminal:
+npm run dev
+```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Visit `http://localhost:8000` to create your first reading plan.
 
-## Contributing
+## Usage
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Creating a Plan
 
-## Code of Conduct
+1. Select scripture volumes to read
+2. Set start and end dates
+3. Optionally choose a starting verse/chapter
+4. Preview word count statistics
+5. Create your plan
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Tracking Progress
 
-## Security Vulnerabilities
+- Click readings to mark them complete
+- Use "Recalculate" to redistribute remaining readings from today
+- Export to calendar apps via ICS feed
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Teacher Features
+
+1. Navigate to `/curricula` to create a curriculum
+2. Search and add required chapters
+3. Share the enrollment code with students
+4. Students join via `/enrollments/join`
+
+## Project Structure
+
+```
+app/
+├── Http/Controllers/    # Route controllers
+├── Livewire/           # Interactive components
+├── Models/             # Eloquent models
+└── Services/           # Business logic
+
+resources/views/
+├── layouts/            # App layouts with dark mode
+├── livewire/           # Livewire component views
+├── plans/              # Plan-related views
+├── curricula/          # Curriculum views
+└── exports/            # Export views
+```
+
+## Routes
+
+| Route | Purpose |
+|-------|---------|
+| `/plans/create` | Create new reading plan |
+| `/plans/{id}` | View and track plan |
+| `/plans/{id}/edit` | Edit plan dates |
+| `/plans/{id}/calendar.ics` | ICS calendar feed |
+| `/share/{token}` | Public plan view |
+| `/curricula` | Teacher dashboard |
+| `/enrollments` | Student enrollments |
+
+## Development
+
+```bash
+# Clear caches
+php artisan cache:clear && php artisan view:clear
+
+# Check routes
+php artisan route:list
+
+# Fresh database (loses data!)
+php artisan migrate:fresh
+```
+
+## Legacy Code
+
+Original PHP implementation preserved in `legacy/` folder for reference. Do not delete.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+MIT

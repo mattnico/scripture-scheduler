@@ -6,9 +6,13 @@
     @endif
 
     <div class="mb-6">
-        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Your Reading Plan</h1>
+        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">{{ $plan->display_name }}</h1>
         <p class="text-gray-600 dark:text-gray-400">
             {{ $plan->start_date->format('M j, Y') }} - {{ $plan->end_date->format('M j, Y') }}
+            @if ($plan->name)
+                <span class="mx-2">|</span>
+                <span>{{ implode(', ', array_map(fn($v) => \App\Models\Scripture::VOLUMES[$v] ?? $v, $plan->volumes ?? [])) }}</span>
+            @endif
         </p>
     </div>
 

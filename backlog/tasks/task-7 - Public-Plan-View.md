@@ -1,7 +1,7 @@
 ---
 id: task-7
 title: Public Plan View
-status: To Do
+status: Done
 assignee: []
 created_date: '2026-01-11 05:27'
 labels: []

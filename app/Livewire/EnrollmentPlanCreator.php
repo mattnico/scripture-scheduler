@@ -59,6 +59,7 @@ class EnrollmentPlanCreator extends Component
         $plan = Plan::create([
             'user_id' => Auth::id(),
             'enrollment_id' => $this->enrollment->id,
+            'name' => $this->enrollment->curriculum->name,
             'start_date' => $this->startDate,
             'end_date' => $this->endDate,
             'scheduling_method' => $this->schedulingMethod,

@@ -11,6 +11,7 @@ class PlanEditor extends Component
 {
     public Plan $plan;
     
+    public string $name = '';
     public string $startDate = '';
     public string $endDate = '';
     public string $schedulingMethod = 'chapter';
@@ -30,6 +31,7 @@ class PlanEditor extends Component
         }
 
         $this->plan = $plan->load('enrollment.curriculum');
+        $this->name = $plan->name ?? '';
         $this->startDate = $plan->start_date->toDateString();
         $this->endDate = $plan->end_date->toDateString();
         $this->schedulingMethod = $plan->scheduling_method;
@@ -87,6 +89,7 @@ class PlanEditor extends Component
             ]);
             
             $this->plan->update([
+                'name' => $this->name ?: null,
                 'start_date' => $this->startDate,
                 'end_date' => $this->endDate,
                 'scheduling_method' => $this->schedulingMethod,
@@ -122,6 +125,7 @@ class PlanEditor extends Component
             $result = $calculator->calculate($params);
 
             $this->plan->update([
+                'name' => $this->name ?: null,
                 'start_date' => $this->startDate,
                 'end_date' => $this->endDate,
                 'scheduling_method' => $this->schedulingMethod,

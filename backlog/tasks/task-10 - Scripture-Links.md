@@ -1,7 +1,7 @@
 ---
 id: task-10
 title: Scripture Links
-status: To Do
+status: Done
 assignee: []
 created_date: '2026-01-11 05:27'
 labels: []

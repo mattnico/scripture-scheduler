@@ -1,7 +1,7 @@
 ---
 id: task-2
 title: ICS Calendar Export
-status: To Do
+status: Done
 assignee: []
 created_date: '2026-01-11 05:27'
 labels: []

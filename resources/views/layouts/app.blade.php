@@ -1,14 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" x-data x-init="
-    Alpine.store('theme', {
-        dark: localStorage.getItem('darkMode') === 'true',
-        toggle() {
-            this.dark = !this.dark;
-            localStorage.setItem('darkMode', this.dark);
-            document.documentElement.classList.toggle('dark', this.dark);
-        }
-    });
-">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,6 +12,18 @@
             if (localStorage.getItem('darkMode') === 'true') {
                 document.documentElement.classList.add('dark');
             }
+            
+            // Register Alpine store before Alpine starts (Livewire bundles Alpine)
+            document.addEventListener('alpine:init', () => {
+                Alpine.store('theme', {
+                    dark: localStorage.getItem('darkMode') === 'true',
+                    toggle() {
+                        this.dark = !this.dark;
+                        localStorage.setItem('darkMode', this.dark);
+                        document.documentElement.classList.toggle('dark', this.dark);
+                    }
+                });
+            });
         </script>
 
         <!-- Fonts -->

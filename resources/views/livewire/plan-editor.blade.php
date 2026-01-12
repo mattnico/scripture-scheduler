@@ -40,7 +40,20 @@
 
     <form wire:submit="updatePlan" class="space-y-6">
         <div class="bg-white dark:bg-gray-800 shadow-sm rounded-lg p-6">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Reading Schedule</h3>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Plan Details</h3>
+            
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Plan Name <span class="text-gray-400 font-normal">(optional)</span>
+                </label>
+                <input 
+                    type="text" 
+                    id="name"
+                    wire:model="name"
+                    placeholder="e.g., Book of Mormon 2026"
+                    class="w-full border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+                >
+            </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>

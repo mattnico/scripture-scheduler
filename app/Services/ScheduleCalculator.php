@@ -224,18 +224,12 @@ class ScheduleCalculator
 
     protected function calculateChapterSchedule(Carbon $startDate, int $totalDays, array $volumes, ?string $beginningChapter): array
     {
+        // Order by MIN(id) to maintain canonical scripture order within each volume
         $chapters = Scripture::whereIn('volume_id', $volumes)
-            ->selectRaw('book_title, chapter, volume_id, SUM(word_count) as word_count, COUNT(*) as verse_count')
+            ->selectRaw('book_title, chapter, volume_id, SUM(word_count) as word_count, COUNT(*) as verse_count, MIN(id) as first_verse_id')
             ->groupBy('book_title', 'chapter', 'volume_id')
             ->orderBy('volume_id')
-            ->orderByRaw("CASE 
-                WHEN book_title LIKE '1 %' THEN 1
-                WHEN book_title LIKE '2 %' THEN 2
-                WHEN book_title LIKE '3 %' THEN 3
-                WHEN book_title LIKE '4 %' THEN 4
-                ELSE 0 END")
-            ->orderBy('book_title')
-            ->orderBy('chapter')
+            ->orderBy('first_verse_id')
             ->get();
 
         if ($chapters->isEmpty()) {

@@ -44,8 +44,13 @@
                                     <div class="flex-1 min-w-0">
                                         <a href="{{ route('plans.show', $plan) }}" class="block">
                                             <h3 class="text-lg font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
-                                                {{ implode(', ', array_map(fn($v) => \App\Livewire\PlanGenerator::VOLUMES[$v] ?? $v, $plan->volumes)) }}
+                                                {{ $plan->display_name }}
                                             </h3>
+                                            @if ($plan->name)
+                                                <p class="text-sm text-gray-500 dark:text-gray-400">
+                                                    {{ implode(', ', array_map(fn($v) => \App\Livewire\PlanGenerator::VOLUMES[$v] ?? $v, $plan->volumes ?? [])) }}
+                                                </p>
+                                            @endif
                                         </a>
                                         <div class="mt-1 flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
                                             <span>

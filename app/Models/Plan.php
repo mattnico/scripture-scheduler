@@ -14,6 +14,7 @@ class Plan extends Model
     protected $fillable = [
         'user_id',
         'enrollment_id',
+        'name',
         'start_date',
         'end_date',
         'scheduling_method',
@@ -25,6 +26,20 @@ class Plan extends Model
         'schedule',
         'public_token',
     ];
+
+    /**
+     * Get the display name for this plan.
+     * Falls back to date range if no custom name set.
+     */
+    public function getDisplayNameAttribute(): string
+    {
+        if ($this->name) {
+            return $this->name;
+        }
+
+        // Fallback to date range
+        return $this->start_date->format('M j, Y') . ' - ' . $this->end_date->format('M j, Y');
+    }
 
     protected $casts = [
         'start_date' => 'date',
