@@ -5,20 +5,12 @@
         </div>
     @endif
 
-    <div class="mb-6 flex items-start gap-4">
-        <a href="{{ route('plans.index') }}" class="mt-1 p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-700 dark:hover:text-gray-200" title="Back to Plans">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-        </a>
-        <div>
-            <h1 class="text-2xl font-bold text-gray-900 dark:text-white">{{ $plan->display_name }}</h1>
-            <p class="text-gray-600 dark:text-gray-400">
-                {{ $plan->start_date->format('M j, Y') }} - {{ $plan->end_date->format('M j, Y') }}
-                <span class="mx-2">|</span>
-                <span>{{ implode(', ', array_map(fn($v) => \App\Models\Scripture::VOLUMES[$v] ?? $v, $plan->volumes ?? [])) }}</span>
-            </p>
-        </div>
+    <div class="mb-6">
+        <p class="text-gray-600 dark:text-gray-400">
+            {{ $plan->start_date->format('M j, Y') }} - {{ $plan->end_date->format('M j, Y') }}
+            <span class="mx-2">|</span>
+            <span>{{ implode(', ', array_map(fn($v) => \App\Models\Scripture::VOLUMES[$v] ?? $v, $plan->volumes ?? [])) }}</span>
+        </p>
     </div>
 
     @if ($todaysReading)
