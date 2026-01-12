@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Plan;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
@@ -40,6 +41,41 @@ class ExportController extends Controller
             'plan' => $plan,
             'months' => $calendarData,
         ]);
+    }
+
+    public function pdfTable(Plan $plan)
+    {
+        $this->authorize($plan);
+        
+        $pdf = Pdf::loadView('exports.pdf-table', [
+            'plan' => $plan,
+            'schedule' => $plan->schedule ?? [],
+        ]);
+        
+        $pdf->setPaper('letter', 'portrait');
+        
+        $filename = 'reading-plan-' . $plan->start_date->format('Y-m-d') . '.pdf';
+        
+        return $pdf->download($filename);
+    }
+
+    public function pdfCalendar(Plan $plan)
+    {
+        $this->authorize($plan);
+        
+        $schedule = $plan->schedule ?? [];
+        $calendarData = $this->organizeByMonth($schedule);
+        
+        $pdf = Pdf::loadView('exports.pdf-calendar', [
+            'plan' => $plan,
+            'months' => $calendarData,
+        ]);
+        
+        $pdf->setPaper('letter', 'landscape');
+        
+        $filename = 'reading-calendar-' . $plan->start_date->format('Y-m-d') . '.pdf';
+        
+        return $pdf->download($filename);
     }
 
     protected function authorize(Plan $plan): void

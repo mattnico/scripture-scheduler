@@ -40,6 +40,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/plans/{plan}/export/csv', [ExportController::class, 'csv'])->name('plans.export.csv');
     Route::get('/plans/{plan}/export/table', [ExportController::class, 'table'])->name('plans.export.table');
     Route::get('/plans/{plan}/export/calendar', [ExportController::class, 'calendar'])->name('plans.export.calendar');
+    Route::get('/plans/{plan}/export/pdf/table', [ExportController::class, 'pdfTable'])->name('plans.export.pdf.table');
+    Route::get('/plans/{plan}/export/pdf/calendar', [ExportController::class, 'pdfCalendar'])->name('plans.export.pdf.calendar');
 
     Route::get('/enrollments', [EnrollmentController::class, 'index'])->name('enrollments.index');
     Route::get('/enrollments/join', [EnrollmentController::class, 'create'])->name('enrollments.create');
