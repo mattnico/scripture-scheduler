@@ -57,9 +57,9 @@
                                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200">
                                                 Code: <span class="ml-1 font-mono">{{ $curriculum->enrollment_code }}</span>
                                             </span>
-                                            <div x-data="{ showQR: false }" class="relative">
+                                            <div x-data="{ showQR: false }">
                                                 <button 
-                                                    @click="showQR = !showQR"
+                                                    @click="showQR = true"
                                                     type="button"
                                                     class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600"
                                                 >
@@ -68,33 +68,36 @@
                                                     </svg>
                                                     QR
                                                 </button>
-                                                <div 
-                                                    x-show="showQR" 
-                                                    @click.away="showQR = false"
-                                                    x-transition
-                                                    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
-                                                >
-                                                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 mx-4">
-                                                        <div class="flex justify-between items-center mb-4">
-                                                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{{ $curriculum->name }}</h3>
-                                                            <button @click="showQR = false" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
-                                                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                                                                </svg>
-                                                            </button>
+                                                <template x-teleport="body">
+                                                    <div 
+                                                        x-show="showQR" 
+                                                        x-transition.opacity
+                                                        @keydown.escape.window="showQR = false"
+                                                        class="fixed inset-0 z-50 flex items-center justify-center"
+                                                    >
+                                                        <div class="absolute inset-0 bg-black/50" @click="showQR = false"></div>
+                                                        <div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 mx-4" @click.stop>
+                                                            <div class="flex justify-between items-center mb-4">
+                                                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{{ $curriculum->name }}</h3>
+                                                                <button @click="showQR = false" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
+                                                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 text-center">Scan to enroll in this curriculum</p>
+                                                            <div class="flex justify-center">
+                                                                <img 
+                                                                    src="{{ $curriculum->qr_code_url }}" 
+                                                                    alt="QR Code for {{ $curriculum->name }}"
+                                                                    class="w-48 h-48"
+                                                                >
+                                                            </div>
+                                                            <p class="text-lg text-gray-700 dark:text-gray-300 mt-4 text-center font-mono font-bold">{{ $curriculum->enrollment_code }}</p>
+                                                            <p class="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">{{ $curriculum->enrollment_url }}</p>
                                                         </div>
-                                                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 text-center">Scan to enroll in this curriculum</p>
-                                                        <div class="flex justify-center">
-                                                            <img 
-                                                                src="{{ $curriculum->qr_code_url }}" 
-                                                                alt="QR Code for {{ $curriculum->name }}"
-                                                                class="w-48 h-48"
-                                                            >
-                                                        </div>
-                                                        <p class="text-lg text-gray-700 dark:text-gray-300 mt-4 text-center font-mono font-bold">{{ $curriculum->enrollment_code }}</p>
-                                                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">{{ $curriculum->enrollment_url }}</p>
                                                     </div>
-                                                </div>
+                                                </template>
                                             </div>
                                         </div>
                                     </div>
