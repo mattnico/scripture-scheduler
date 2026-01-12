@@ -28,6 +28,15 @@ class PlanController extends Controller
         return view('plans.show', compact('plan'));
     }
 
+    public function edit(Plan $plan): View
+    {
+        if ($plan->user_id !== Auth::id()) {
+            abort(403);
+        }
+
+        return view('plans.edit', compact('plan'));
+    }
+
     public function destroy(Plan $plan)
     {
         $plan->delete();

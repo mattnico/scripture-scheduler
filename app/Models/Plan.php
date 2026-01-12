@@ -23,6 +23,7 @@ class Plan extends Model
         'words_per_day',
         'total_days',
         'schedule',
+        'public_token',
     ];
 
     protected $casts = [
@@ -77,21 +78,55 @@ class Plan extends Model
     public function isDateCompleted(string $date): bool
     {
         return $this->progress()
-            ->where('reading_date', $date)
+            ->where('reading_date', \Carbon\Carbon::parse($date)->startOfDay())
             ->where('completed', true)
             ->exists();
     }
 
     public function toggleProgress(string $date): void
     {
-        $progress = $this->progress()->firstOrCreate(
-            ['reading_date' => $date],
-            ['completed' => false]
-        );
+        $carbonDate = \Carbon\Carbon::parse($date)->startOfDay();
+        
+        $progress = $this->progress()
+            ->where('reading_date', $carbonDate)
+            ->first();
 
-        $progress->update([
-            'completed' => !$progress->completed,
-            'completed_at' => !$progress->completed ? now() : null,
-        ]);
+        if ($progress) {
+            $progress->update([
+                'completed' => !$progress->completed,
+                'completed_at' => !$progress->completed ? now() : null,
+            ]);
+        } else {
+            $this->progress()->create([
+                'reading_date' => $carbonDate,
+                'completed' => true,
+                'completed_at' => now(),
+            ]);
+        }
+    }
+
+    public function generatePublicToken(): string
+    {
+        if (!$this->public_token) {
+            $this->public_token = \Illuminate\Support\Str::random(32);
+            $this->save();
+        }
+        
+        return $this->public_token;
+    }
+
+    public function getPublicUrl(): ?string
+    {
+        if (!$this->public_token) {
+            return null;
+        }
+        
+        return route('plans.public', $this->public_token);
+    }
+
+    public function revokePublicAccess(): void
+    {
+        $this->public_token = null;
+        $this->save();
     }
 }

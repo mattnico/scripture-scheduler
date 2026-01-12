@@ -32,6 +32,15 @@ class ScheduleCalculator
 
     protected function calculateFromRequiredChapters(Carbon $startDate, int $totalDays, Collection $requiredChapters, string $schedulingMethod): array
     {
+        if ($schedulingMethod === 'verse') {
+            return $this->calculateVerseScheduleFromChapters($startDate, $totalDays, $requiredChapters);
+        }
+
+        return $this->calculateChapterScheduleFromChapters($startDate, $totalDays, $requiredChapters);
+    }
+
+    protected function calculateChapterScheduleFromChapters(Carbon $startDate, int $totalDays, Collection $requiredChapters): array
+    {
         $allChapters = [];
 
         foreach ($requiredChapters as $req) {
@@ -84,6 +93,67 @@ class ScheduleCalculator
                     'chapter_count' => count($dayChapters),
                 ];
             }
+        }
+
+        return [
+            'schedule' => $schedule,
+            'total_words' => $totalWords,
+            'words_per_day' => $wordsPerDay,
+            'total_days' => count($schedule),
+        ];
+    }
+
+    protected function calculateVerseScheduleFromChapters(Carbon $startDate, int $totalDays, Collection $requiredChapters): array
+    {
+        $allVerses = collect();
+
+        foreach ($requiredChapters as $req) {
+            $chapterStart = $req->chapter_start;
+            $chapterEnd = $req->chapter_end ?? $req->chapter_start;
+
+            $verses = Scripture::where('book_title', $req->book_title)
+                ->whereBetween('chapter', [$chapterStart, $chapterEnd])
+                ->orderBy('verse_id')
+                ->get();
+
+            $allVerses = $allVerses->concat($verses);
+        }
+
+        if ($allVerses->isEmpty()) {
+            return $this->emptyResult();
+        }
+
+        $totalWords = $allVerses->sum('word_count');
+        $wordsPerDay = (int) ceil($totalWords / $totalDays);
+
+        $schedule = [];
+        $currentIndex = 0;
+        $versesArray = $allVerses->values()->all();
+        $totalVerses = count($versesArray);
+
+        for ($day = 0; $day < $totalDays && $currentIndex < $totalVerses; $day++) {
+            $date = $startDate->copy()->addDays($day)->toDateString();
+            $dayWords = 0;
+            $dayVerseCount = 0;
+            $startVerseTitle = $versesArray[$currentIndex]->verse_title;
+            $endVerseTitle = $startVerseTitle;
+
+            while ($currentIndex < $totalVerses && $dayWords < $wordsPerDay) {
+                $verse = $versesArray[$currentIndex];
+                $dayWords += $verse->word_count;
+                $dayVerseCount++;
+                $endVerseTitle = $verse->verse_title;
+                $currentIndex++;
+            }
+
+            $schedule[] = [
+                'date' => $date,
+                'reading' => $startVerseTitle === $endVerseTitle 
+                    ? $startVerseTitle 
+                    : $this->formatRange($startVerseTitle, $endVerseTitle),
+                'word_count' => $dayWords,
+                'verse_count' => $dayVerseCount,
+            ];
         }
 
         return [

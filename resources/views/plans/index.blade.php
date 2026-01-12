@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex justify-between items-center">
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
                 {{ __('My Reading Plans') }}
             </h2>
             <a href="{{ route('plans.create') }}" 
@@ -14,19 +14,19 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             @if (session('success'))
-                <div class="mb-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+                <div class="mb-4 bg-green-100 dark:bg-green-900/30 border border-green-400 dark:border-green-700 text-green-700 dark:text-green-300 px-4 py-3 rounded">
                     {{ session('success') }}
                 </div>
             @endif
 
             @if ($plans->isEmpty())
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-12 text-center">
-                        <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg class="mx-auto h-12 w-12 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
-                        <h3 class="mt-2 text-sm font-medium text-gray-900">No reading plans</h3>
-                        <p class="mt-1 text-sm text-gray-500">Get started by creating a new reading plan.</p>
+                        <h3 class="mt-2 text-sm font-medium text-gray-900 dark:text-white">No reading plans</h3>
+                        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Get started by creating a new reading plan.</p>
                         <div class="mt-6">
                             <a href="{{ route('plans.create') }}" 
                                class="inline-flex items-center px-4 py-2 bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700">
@@ -36,18 +36,18 @@
                     </div>
                 </div>
             @else
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <ul class="divide-y divide-gray-200">
+                <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+                    <ul class="divide-y divide-gray-200 dark:divide-gray-700">
                         @foreach ($plans as $plan)
-                            <li class="p-6 hover:bg-gray-50">
+                            <li class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700/50">
                                 <div class="flex items-center justify-between">
                                     <div class="flex-1 min-w-0">
                                         <a href="{{ route('plans.show', $plan) }}" class="block">
-                                            <h3 class="text-lg font-medium text-gray-900 hover:text-blue-600">
+                                            <h3 class="text-lg font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400">
                                                 {{ implode(', ', array_map(fn($v) => \App\Livewire\PlanGenerator::VOLUMES[$v] ?? $v, $plan->volumes)) }}
                                             </h3>
                                         </a>
-                                        <div class="mt-1 flex items-center gap-4 text-sm text-gray-500">
+                                        <div class="mt-1 flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
                                             <span>
                                                 {{ $plan->start_date->format('M j, Y') }} - {{ $plan->end_date->format('M j, Y') }}
                                             </span>
@@ -60,16 +60,16 @@
                                         </div>
                                         <div class="mt-2">
                                             <div class="flex items-center gap-2">
-                                                <div class="flex-1 bg-gray-200 rounded-full h-2 max-w-xs">
-                                                    <div class="bg-blue-600 h-2 rounded-full" style="width: {{ $plan->progress_percentage }}%;"></div>
+                                                <div class="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2 max-w-xs">
+                                                    <div class="bg-blue-600 dark:bg-blue-500 h-2 rounded-full" style="width: {{ $plan->progress_percentage }}%;"></div>
                                                 </div>
-                                                <span class="text-sm text-gray-600">{{ $plan->progress_percentage }}%</span>
+                                                <span class="text-sm text-gray-600 dark:text-gray-400">{{ $plan->progress_percentage }}%</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="flex items-center gap-2 ml-4">
                                         <a href="{{ route('plans.show', $plan) }}" 
-                                           class="inline-flex items-center px-3 py-1.5 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                                           class="inline-flex items-center px-3 py-1.5 border border-gray-300 dark:border-gray-600 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700">
                                             View
                                         </a>
                                         <form action="{{ route('plans.destroy', $plan) }}" method="POST" 
@@ -77,7 +77,7 @@
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" 
-                                                    class="inline-flex items-center px-3 py-1.5 border border-red-300 rounded-md text-sm font-medium text-red-700 bg-white hover:bg-red-50">
+                                                    class="inline-flex items-center px-3 py-1.5 border border-red-300 dark:border-red-700 rounded-md text-sm font-medium text-red-700 dark:text-red-400 bg-white dark:bg-gray-800 hover:bg-red-50 dark:hover:bg-red-900/30">
                                                 Delete
                                             </button>
                                         </form>

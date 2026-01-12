@@ -1,14 +1,21 @@
 <?php
 
+use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\CurriculumController;
 use App\Http\Controllers\EnrollmentController;
+use App\Http\Controllers\ExportController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PublicPlanController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect()->route('plans.create');
 });
+
+// Public routes - no auth required
+Route::get('/plans/{plan}/calendar.ics', [CalendarController::class, 'show'])->name('plans.calendar');
+Route::get('/share/{token}', [PublicPlanController::class, 'show'])->name('plans.public');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -27,10 +34,17 @@ Route::middleware('auth')->group(function () {
     Route::get('/plans', [PlanController::class, 'index'])->name('plans.index');
     Route::get('/plans/create', [PlanController::class, 'create'])->name('plans.create');
     Route::get('/plans/{plan}', [PlanController::class, 'show'])->name('plans.show');
+    Route::get('/plans/{plan}/edit', [PlanController::class, 'edit'])->name('plans.edit');
     Route::delete('/plans/{plan}', [PlanController::class, 'destroy'])->name('plans.destroy');
+    
+    Route::get('/plans/{plan}/export/csv', [ExportController::class, 'csv'])->name('plans.export.csv');
+    Route::get('/plans/{plan}/export/table', [ExportController::class, 'table'])->name('plans.export.table');
+    Route::get('/plans/{plan}/export/calendar', [ExportController::class, 'calendar'])->name('plans.export.calendar');
 
     Route::get('/enrollments', [EnrollmentController::class, 'index'])->name('enrollments.index');
     Route::get('/enrollments/join', [EnrollmentController::class, 'create'])->name('enrollments.create');
+    Route::get('/enrollments/{enrollment}/create-plan', [EnrollmentController::class, 'createPlan'])->name('enrollments.create-plan');
+    Route::delete('/enrollments/{enrollment}', [EnrollmentController::class, 'destroy'])->name('enrollments.destroy');
 });
 
 require __DIR__.'/auth.php';

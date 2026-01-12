@@ -20,6 +20,10 @@ class CurriculumEditor extends Component
     public string $searchQuery = '';
     public array $searchResults = [];
     
+    public string $bulkImportText = '';
+    public bool $showBulkImport = false;
+    public array $importErrors = [];
+    
     public bool $showSuccess = false;
     public string $successMessage = '';
 
@@ -64,10 +68,14 @@ class CurriculumEditor extends Component
             return;
         }
 
+        $searchTerm = $this->searchQuery;
+        
         $this->searchResults = Scripture::query()
             ->selectRaw('DISTINCT book_title, chapter, volume_id')
-            ->where('book_title', 'LIKE', "%{$this->searchQuery}%")
-            ->orWhere('verse_title', 'LIKE', "{$this->searchQuery}%")
+            ->where(function ($query) use ($searchTerm) {
+                $query->where('book_title', 'LIKE', "%{$searchTerm}%")
+                      ->orWhere('verse_title', 'LIKE', "%{$searchTerm}%");
+            })
             ->orderBy('volume_id')
             ->orderBy('book_title')
             ->orderBy('chapter')
@@ -150,6 +158,90 @@ class CurriculumEditor extends Component
             $this->chapters[$index + 1] = $this->chapters[$index];
             $this->chapters[$index] = $temp;
         }
+    }
+
+    public function toggleBulkImport(): void
+    {
+        $this->showBulkImport = !$this->showBulkImport;
+        $this->bulkImportText = '';
+        $this->importErrors = [];
+    }
+
+    public function processBulkImport(): void
+    {
+        $this->importErrors = [];
+        
+        if (empty(trim($this->bulkImportText))) {
+            $this->importErrors[] = 'Please enter some chapters to import.';
+            return;
+        }
+
+        $lines = preg_split('/[\n,;]+/', $this->bulkImportText);
+        $imported = 0;
+
+        foreach ($lines as $line) {
+            $line = trim($line);
+            if (empty($line)) continue;
+
+            $parsed = $this->parseChapterReference($line);
+            
+            if ($parsed === null) {
+                $this->importErrors[] = "Could not parse: \"{$line}\"";
+                continue;
+            }
+
+            $this->chapters[] = $parsed;
+            $imported++;
+        }
+
+        if ($imported > 0) {
+            $this->showBulkImport = false;
+            $this->bulkImportText = '';
+        }
+    }
+
+    protected function parseChapterReference(string $reference): ?array
+    {
+        $reference = trim($reference);
+        
+        if (preg_match('/^(.+?)\s+(\d+)\s*[-–]\s*(\d+)$/', $reference, $matches)) {
+            $bookTitle = trim($matches[1]);
+            $startChapter = (int) $matches[2];
+            $endChapter = (int) $matches[3];
+            
+            $volumeId = $this->lookupVolumeId($bookTitle);
+            if ($volumeId === null) return null;
+            
+            return [
+                'book_title' => $bookTitle,
+                'chapter_start' => $startChapter,
+                'chapter_end' => $endChapter,
+                'volume_id' => $volumeId,
+            ];
+        }
+        
+        if (preg_match('/^(.+?)\s+(\d+)$/', $reference, $matches)) {
+            $bookTitle = trim($matches[1]);
+            $chapter = (int) $matches[2];
+            
+            $volumeId = $this->lookupVolumeId($bookTitle);
+            if ($volumeId === null) return null;
+            
+            return [
+                'book_title' => $bookTitle,
+                'chapter_start' => $chapter,
+                'chapter_end' => null,
+                'volume_id' => $volumeId,
+            ];
+        }
+        
+        return null;
+    }
+
+    protected function lookupVolumeId(string $bookTitle): ?int
+    {
+        $scripture = Scripture::where('book_title', $bookTitle)->first();
+        return $scripture?->volume_id;
     }
 
     public function save(): void

@@ -1,0 +1,14 @@
+project:
+  name: Scripture Scheduler Migration
+  description: Laravel 12 + Livewire 3 migration of scripture reading scheduler
+
+statuses:
+  - backlog
+  - todo  
+  - in-progress
+  - done
+
+priorities:
+  - high
+  - medium
+  - low
