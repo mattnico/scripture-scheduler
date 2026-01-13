@@ -21,6 +21,11 @@ Route::get('/dashboard', function () {
 Route::get('/plans/{plan}/calendar.ics', [CalendarController::class, 'show'])->name('plans.calendar');
 Route::get('/share/{token}', [PublicPlanController::class, 'show'])->name('plans.public');
 
+// Short enrollment URL
+Route::get('/e/{code}', function (string $code) {
+    return redirect()->route('enrollments.create', ['code' => strtoupper($code)]);
+})->name('enrollments.short');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

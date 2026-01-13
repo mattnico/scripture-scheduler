@@ -70,7 +70,7 @@ class Curriculum extends Model
 
     public function getEnrollmentUrlAttribute(): string
     {
-        return route('enrollments.create') . '?code=' . $this->enrollment_code;
+        return route('enrollments.short', ['code' => $this->enrollment_code]);
     }
 
     public function getQrCodeUrlAttribute(): string
