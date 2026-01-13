@@ -7,16 +7,15 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Dark mode - must run before CSS loads to prevent FOUC -->
+        <!-- Dark mode - default to dark, must run before CSS loads to prevent FOUC -->
         <script>
-            if (localStorage.getItem('darkMode') === 'true') {
+            if (localStorage.getItem('darkMode') !== 'false') {
                 document.documentElement.classList.add('dark');
             }
             
-            // Register Alpine store before Alpine starts (Livewire bundles Alpine)
             document.addEventListener('alpine:init', () => {
                 Alpine.store('theme', {
-                    dark: localStorage.getItem('darkMode') === 'true',
+                    dark: localStorage.getItem('darkMode') !== 'false',
                     toggle() {
                         this.dark = !this.dark;
                         localStorage.setItem('darkMode', this.dark);
@@ -50,6 +49,11 @@
             <main>
                 {{ $slot }}
             </main>
+
+            <!-- Footer -->
+            <footer class="py-4 text-center text-sm text-gray-500 dark:text-gray-400">
+                SmallSimple.org is not an official website of the Church of Jesus Christ of Latter-day Saints.
+            </footer>
         </div>
     </body>
 </html>

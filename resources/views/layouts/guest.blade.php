@@ -8,13 +8,13 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <script>
-            if (localStorage.getItem('darkMode') === 'true') {
+            if (localStorage.getItem('darkMode') !== 'false') {
                 document.documentElement.classList.add('dark');
             }
             
             document.addEventListener('alpine:init', () => {
                 Alpine.store('theme', {
-                    dark: localStorage.getItem('darkMode') === 'true',
+                    dark: localStorage.getItem('darkMode') !== 'false',
                     toggle() {
                         this.dark = !this.dark;
                         localStorage.setItem('darkMode', this.dark);

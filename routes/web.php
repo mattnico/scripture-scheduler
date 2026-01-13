@@ -10,16 +10,16 @@ use App\Http\Controllers\PublicPlanController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return redirect()->route('plans.create');
+    return redirect()->route('plans.index');
 });
+
+Route::get('/dashboard', function () {
+    return redirect()->route('plans.index');
+})->middleware(['auth'])->name('dashboard');
 
 // Public routes - no auth required
 Route::get('/plans/{plan}/calendar.ics', [CalendarController::class, 'show'])->name('plans.calendar');
 Route::get('/share/{token}', [PublicPlanController::class, 'show'])->name('plans.public');
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
